@@ -3,7 +3,13 @@
     1st Commit
     */
 
-class MainClass
+using System;
+using System.Text;
+using static System.Console;
+
+namespace FirstFloor
+{
+    class MainClass
     {
         public static void Main(string[] args)
         {
@@ -24,3 +30,4 @@ class MainClass
 
         }
     }
+}
