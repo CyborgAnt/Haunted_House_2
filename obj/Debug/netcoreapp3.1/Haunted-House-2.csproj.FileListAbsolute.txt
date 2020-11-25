@@ -1,0 +1,12 @@
+/Users/newmac/Desktop/Haunted-House-2/obj/Debug/netcoreapp3.1/Haunted-House-2.csprojAssemblyReference.cache
+/Users/newmac/Desktop/Haunted-House-2/obj/Debug/netcoreapp3.1/Haunted-House-2.AssemblyInfoInputs.cache
+/Users/newmac/Desktop/Haunted-House-2/obj/Debug/netcoreapp3.1/Haunted-House-2.AssemblyInfo.cs
+/Users/newmac/Desktop/Haunted-House-2/obj/Debug/netcoreapp3.1/Haunted-House-2.csproj.CoreCompileInputs.cache
+/Users/newmac/Desktop/Haunted-House-2/bin/Debug/netcoreapp3.1/Haunted-House-2.deps.json
+/Users/newmac/Desktop/Haunted-House-2/bin/Debug/netcoreapp3.1/Haunted-House-2.runtimeconfig.json
+/Users/newmac/Desktop/Haunted-House-2/bin/Debug/netcoreapp3.1/Haunted-House-2.runtimeconfig.dev.json
+/Users/newmac/Desktop/Haunted-House-2/bin/Debug/netcoreapp3.1/Haunted-House-2.dll
+/Users/newmac/Desktop/Haunted-House-2/bin/Debug/netcoreapp3.1/Haunted-House-2.pdb
+/Users/newmac/Desktop/Haunted-House-2/obj/Debug/netcoreapp3.1/Haunted-House-2.dll
+/Users/newmac/Desktop/Haunted-House-2/obj/Debug/netcoreapp3.1/Haunted-House-2.pdb
+/Users/newmac/Desktop/Haunted-House-2/obj/Debug/netcoreapp3.1/Haunted-House-2.genruntimeconfig.cache

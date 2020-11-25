@@ -6,10 +6,11 @@
 using System;
 using System.Text;
 using static System.Console;
+using HouseFirst;
 
 namespace FirstFloor
 {
-    class MainClass
+    class Program
     {
         public static void Main(string[] args)
         {
@@ -22,11 +23,11 @@ namespace FirstFloor
             Console.ReadLine();         // waits on the user to press Enter
 
             Console.Clear();            // clears the console screen
-            WriteLine("You start your adventure by walking up to the porch of the house. You grab the handle of the front door, pull it open, and step into the entryway....");
+            WriteLine("You start your adventure by walking up to the porch of the house.\nYou grab the handle of the front door, pull it open, and step into the entryway....");
             
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
-            entryway();
+            FrontHouse.entryway();
 
         }
     }

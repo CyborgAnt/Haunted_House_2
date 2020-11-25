@@ -17,12 +17,15 @@ namespace HouseFirst
             Console.Clear();
 
             WriteLine("You have a few choices. What would you like to do?");
-            WriteLine("Enter '1' to check the Left Door\nEnter '2' to check the Right Door\Enter '3' to choose the Hall\Enter 'Q' or 'q' to end the program");
-            var choiceEntry = ReadLine();
+            WriteLine("Enter '1' to check the Left Door\nEnter '2' to check the Right Door\nEnter '3' to choose the Hall\nEnter '0' to end the program");
+            var choiceEntry = Int32.Parse(ReadLine());
 
             switch (choiceEntry)
             {
                 // these are Test cases
+                case 0:
+                    WriteLine("You have exited the program.");
+                    break;
                 case 1:
                     WriteLine("Left Door!");
                     break;
@@ -39,5 +42,59 @@ namespace HouseFirst
             }
 
         }
+
+        public static void study()
+        {
+            WriteLine("You open the door to the left.");
+            WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
+            Console.ReadLine();
+            // Console.Clear();
+            WriteLine("It is a Study, and a well-lit, well-furnished one. There is a very large window on the wall to your left. A long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small end tables. On the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
+            WriteLine("There is no other door leading into, or out of, the room, other than the one you're stand ing at. Press 'Enter' to Continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("What would you like to do?");
+            var studyChoice = Int32.Parse(Console.ReadLine());
+
+            /* switch cases; put in 'Decisions' file
+               'Dictionary' on Bookcase 1; nothing in room-general
+               */
+
+
+        }
+
+        public static void livingRoom()
+        {
+            Console.Clear();
+            WriteLine("You enter the Living Room.");
+            WriteLine("The room is in a state of disrepair.\n You see a large grey couch, laying on it's side in the center of the room. A loveseat is also laying on its side, next to the couch.\nTo the left, there is a mantle piece against the far left wall. In front of the Mantle are the remains of what appears to be a coffee table - it looks like it was thrown against the mantle.");
+            WriteLine("There are two, normal-sized windows on the wall across from the door, with some odds and ends on the floor, possibly from the coffee table.\nLooking at the Mantle: to its left, there is a set of stairs that lead up.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("What would you like to do?");
+            var livingRoomChoice = Int32.Parse(ReadLine());
+
+            /* switch-cases
+                Mantle: some info on couple/family
+                Closest Window: 'Movement'
+                Farthest Window: 'Encounter'
+                */
+
+        }
+
+        public static void bedroom()
+        {
+
+        }
+
+        public static void hall()
+        {
+
+        }
+
+
     }
 }
