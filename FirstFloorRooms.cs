@@ -45,6 +45,7 @@ namespace HouseFirst
 
         public static void study()
         {
+            // left door
             WriteLine("You open the door to the left.");
             WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
             Console.ReadLine();
@@ -66,6 +67,7 @@ namespace HouseFirst
 
         public static void livingRoom()
         {
+            // right door
             Console.Clear();
             WriteLine("You enter the Living Room.");
             WriteLine("The room is in a state of disrepair.\n You see a large grey couch, laying on it's side in the center of the room. A loveseat is also laying on its side, next to the couch.\nTo the left, there is a mantle piece against the far left wall. In front of the Mantle are the remains of what appears to be a coffee table - it looks like it was thrown against the mantle.");
@@ -87,14 +89,54 @@ namespace HouseFirst
 
         public static void bedroom()
         {
+            Console.WriteLine("You enter a Bedroom.");
+            Console.WriteLine("It's a large, nice bedroom, not suffering from the ramsacked appearance of most of the rest of the house.\n You see most of your 'typical' bedroom furniture: a large bed, a couple of night stands, a dresser, and a cabinet that has a lot of knick-knacks.\n");
+            Console.WriteLine("There is a closet in a corner, and a door that opens onto a bathroom across from the closet.\nPress 'Enter' to continue.");
+            
+            Console.ReadLine();
+            WriteLine("What would you like to do next?");
+
+            /* switch-cases:
+                bathroom - vision?
+                closet, cabinet - nothing
+                leave - back to Left Hall
+                */
+
 
         }
 
         public static void hall()
         {
+            Console.Clear();
+            WriteLine("You start down the Hall.");
+            WriteLine("The hall has a few spots where light bulbs would normally be set. However, only one bulb is in and lit, making the hall a bit gloomy.");
+            WriteLine("You notice 3 separate doors on your left; they could be closets or storage spaces but all 3 doors are closed.");
+            WriteLine("The hall ends at a 'T'-intersection with another hallway; where your hall ends, there is a door leading into another room.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("What would you like to do?");
+            /* switch-cases:
+                Door 1: Closet 1 - nothing
+                Door 2: Closet 2 - Hand Encounter
+                Door 3: Utility Closet - ?
+                Door Ahead: Dining Room (BackHouse)
+                New Hall - put in Back House
+                */
 
         }
 
+        public static void bathroom()
+        {
+            //bathroom also has an entry from the Left Branch of the New Hall
+            WriteLine("You look into the bathroom");
+            WriteLine("The bathroom is not overly large, but there's a large amount of damage that's been done to it. There is a large shower and bathtub, but the tub has been cracked. There is a sink and a medicine cabinet above it, but the sink has been ripped away from the wall, partially laying in/on the bath tub. Press 'Enter' to continue.");
+            Console.ReadLine();
+            WriteLine("As you continue to look around, you notice a few drops of blood on the floor, on the sink remnants, and on the walls. You don't see anything else of note.");
+            // add branch to go back to New Hall or Bedroom
 
+        }
+        
     }
 }
