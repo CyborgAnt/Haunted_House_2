@@ -14,7 +14,6 @@ namespace HouseFirst
             WriteLine("Press 'Enter to continue.");
 
             Console.ReadLine();
-            Console.Clear();
 
             WriteLine("You have a few choices. What would you like to do?");
             WriteLine("Enter '1' to check the Left Door\nEnter '2' to check the Right Door\nEnter '3' to choose the Hall\nEnter '0' to end the program");
@@ -22,20 +21,19 @@ namespace HouseFirst
 
             switch (choiceEntry)
             {
-                // these are Test cases
+                // add choices/exception for anything entered other than 0-3
                 case 0:
                     WriteLine("You have exited the program.");
                     break;
                 case 1:
-                    WriteLine("Left Door!");
+                    study();
                     break;
                 case 2:
-                    WriteLine("Right Door!");
+                    livingRoom();
                     break;
                 case 3:
-                    WriteLine("Hall!");
+                    hall();
                     break;    
-
                 default:
                     WriteLine("You have exited the program.");
                     break;
@@ -50,7 +48,7 @@ namespace HouseFirst
             WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
             Console.ReadLine();
             // Console.Clear();
-            WriteLine("It is a Study, and a well-lit, well-furnished one. There is a very large window on the wall to your left. A long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small end tables. On the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
+            WriteLine("It is a Study, and a well-lit, well-furnished one. There is a very large window on the wall to your left. A long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. On the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
             WriteLine("There is no other door leading into, or out of, the room, other than the one you're stand ing at. Press 'Enter' to Continue.");
             Console.ReadLine();
             Console.Clear();
@@ -58,10 +56,26 @@ namespace HouseFirst
             WriteLine("What would you like to do?");
             var studyChoice = Int32.Parse(Console.ReadLine());
 
-            /* switch cases; put in 'Decisions' file
-               'Dictionary' on Bookcase 1; nothing in room-general
-               */
+            WriteLine("Enter '1' to check the Bookcases\nEnter '2' to check one of the tables\nEnter '3' to return to the Entry\nAnything else to Quit the program");
 
+            switch (studyChoice)
+            {
+                case 1:
+                    //bookcase search
+                    ItemSearches.studyBookcases();
+                    break;
+                case 2:
+                    WriteLine("You check the small tables. You find nothing of interest or value. Press 'Enter' to continue and return to the Study.");
+                    Console.ReadLine();
+                    break;
+                case 3:
+                    // return to the Entry
+                    entryway();
+                    break;
+                default:
+                    WriteLine("You have exited the program.");
+                    break;
+            }
 
         }
 
@@ -69,7 +83,7 @@ namespace HouseFirst
         {
             // right door
             Console.Clear();
-            WriteLine("You enter the Living Room.");
+            WriteLine("You open the door and enter the Living Room.");
             WriteLine("The room is in a state of disrepair.\n You see a large grey couch, laying on it's side in the center of the room. A loveseat is also laying on its side, next to the couch.\nTo the left, there is a mantle piece against the far left wall. In front of the Mantle are the remains of what appears to be a coffee table - it looks like it was thrown against the mantle.");
             WriteLine("There are two, normal-sized windows on the wall across from the door, with some odds and ends on the floor, possibly from the coffee table.\nLooking at the Mantle: to its left, there is a set of stairs that lead up.");
             WriteLine("Press 'Enter' to continue.");
@@ -101,8 +115,34 @@ namespace HouseFirst
                 closet, cabinet - nothing
                 leave - back to Left Hall
                 */
+            WriteLine("Enter '1' to check the Bathroom\nEnter '2' to check the Closet\nEnter '3' to check the Cabinet\nEnter '4' to Leave the bedroom\nEnter Anythng else to Quit the program.");
+            Console.ReadLine();
 
+            var bedroomChoice = Int32.Parse(Console.ReadLine());
 
+            switch (bedroomChoice)
+            {
+                case 1:
+                    //Bathroom
+
+                    break;
+                case 2:
+                    //Bedroom Closet - nothing
+
+                    break;
+                case 3:
+                    //Cabinet - ?
+
+                    break;
+
+                case 4:
+                    WriteLine("You leave the bedroom. Press 'Enter' to continue.");
+                    Console.ReadLine();            
+                    break;
+                default:
+                    WriteLine("You have exited the program.");
+                    break; 
+            }
         }
 
         public static void hall()
@@ -138,5 +178,28 @@ namespace HouseFirst
 
         }
         
+    }
+
+    class Backhouse
+    {
+        public static void tHall()
+        {
+
+        }
+
+        public static void masterBedroom()
+        {
+
+        }
+
+        public static void diningRoom()
+        {
+
+        }
+
+        public static void kitchen()
+        {
+
+        }
     }
 }

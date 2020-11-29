@@ -14,6 +14,7 @@ namespace FirstFloor
     {
         public static void Main(string[] args)
         {
+            Console.Clear();
             Console.WriteLine("Welcome to The Dark House, a Choose-Your-Own-Adventure Story!");
             Console.WriteLine("\nYou are an Investigator, sent to check out the old Adams Manor, nicknamed 'The Dark House'. There have been reports of strange lights and noises at the House, plus sightings that might not be... human.");
             Console.WriteLine("You are armed with a Gun and a Flashlight.");
