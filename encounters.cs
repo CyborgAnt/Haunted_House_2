@@ -18,7 +18,7 @@ class Encounters
 
     public static void window2()
     {
-        //yanked out - random numbers?
+        //in Living Room; yanked out - random numbers?
 
     }
 

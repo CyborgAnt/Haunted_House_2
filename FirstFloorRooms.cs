@@ -21,7 +21,6 @@ namespace HouseFirst
 
             switch (choiceEntry)
             {
-                // add choices/exception for anything entered other than 0-3
                 case 0:
                     WriteLine("You have exited the program.");
                     break;
@@ -35,7 +34,7 @@ namespace HouseFirst
                     hall();
                     break;    
                 default:
-                    WriteLine("You have exited the program.");
+                    ItemSearches.nothing();     //will cut back on repetitive code
                     break;
             }
 
@@ -47,11 +46,10 @@ namespace HouseFirst
             WriteLine("You open the door to the left.");
             WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
             Console.ReadLine();
-            // Console.Clear();
+            Console.Clear();
             WriteLine("It is a Study, and a well-lit, well-furnished one. There is a very large window on the wall to your left. A long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. On the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
             WriteLine("There is no other door leading into, or out of, the room, other than the one you're stand ing at. Press 'Enter' to Continue.");
             Console.ReadLine();
-            Console.Clear();
 
             WriteLine("What would you like to do?");
             var studyChoice = Int32.Parse(Console.ReadLine());
@@ -88,17 +86,45 @@ namespace HouseFirst
             WriteLine("There are two, normal-sized windows on the wall across from the door, with some odds and ends on the floor, possibly from the coffee table.\nLooking at the Mantle: to its left, there is a set of stairs that lead up.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
-            Console.Clear();
 
             WriteLine("What would you like to do?");
             var livingRoomChoice = Int32.Parse(ReadLine());
 
-            /* switch-cases
-                Mantle: some info on couple/family
-                Closest Window: 'Movement'
-                Farthest Window: 'Encounter'
-                */
+            WriteLine("Enter '1' to check the Mantle\nEnter '2' to look out the Closest Window\nEnter '3' to look out the Far Window\nEnter '4' to check the Couch\nEnter '5' to check the Loveseat\nEnter Any Other Character to Quit the program");
 
+            switch (livingRoomChoice)
+            {
+                case 1:
+                    // Mantle - picture, info
+                    break;
+                case 2:
+                    // Window - near
+                    Console.Clear();
+                    WriteLine("You head over to the nearest window and take a look out.");
+                    WriteLine("It's dusk, not quite total darkness. There is a line of trees a few dozen feet away. You look deep - something moved in the trees! Press 'Enter' to continue.");
+
+                    Console.ReadLine();
+                    // Console.Clear();
+                    WriteLine("You try to focus on the movement but can't quite make out what it was... other than it wasn't small. Slightly disturbed, you turn your attention back to the Living Room. Press 'Enter' to continue.");
+
+                    Console.ReadLine();
+                    Console.Clear();
+                    livingRoom();                  
+                    break;
+                case 3:
+                    // Window - far
+                    Encounters.window2();
+                    break;
+                case 4:
+                    ItemSearches.couch();
+                    break;            
+                case 5:
+                    ItemSearches.nothing();
+                    break;                
+                default:
+                    WriteLine("You have exited the program.");
+                    break;
+            }
         }
 
         public static void bedroom()
@@ -151,10 +177,9 @@ namespace HouseFirst
             WriteLine("You start down the Hall.");
             WriteLine("The hall has a few spots where light bulbs would normally be set. However, only one bulb is in and lit, making the hall a bit gloomy.");
             WriteLine("You notice 3 separate doors on your left; they could be closets or storage spaces but all 3 doors are closed.");
-            WriteLine("The hall ends at a 'T'-intersection with another hallway; where your hall ends, there is a door leading into another room.");
+            WriteLine("The hall ends at a 'T'-intersection with another hallway; where that hall ends, there is a door leading into another room.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
-            Console.Clear();
 
             WriteLine("What would you like to do?");
             /* switch-cases:
@@ -164,6 +189,19 @@ namespace HouseFirst
                 Door Ahead: Dining Room (BackHouse)
                 New Hall - put in Back House
                 */
+            var hallChoice = Int32.Parse(Console.ReadLine());
+
+            switch (hallChoice)
+            {
+                case 1:
+                    Encounters.hand();
+                    break;
+
+
+                default:
+                    WriteLine("You have exited the program.");
+                    break;
+            }
 
         }
 
