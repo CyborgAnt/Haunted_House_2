@@ -89,7 +89,7 @@ namespace HouseFirst
 
             WriteLine("There are a few options - what would you like to do?");
 
-            WriteLine("Enter '1' to examine the Mantle\nEnter '2' to look out the Closest Window\nEnter '3' to look out the Far Window\nEnter '4' to check the Couch\nEnter '5' to check the Loveseat\nEnter '0' to Quit the program");
+            WriteLine("Enter '1' to examine the Mantle\nEnter '2' to look out the Closest Window\nEnter '3' to look out the Far Window\nEnter '4' to check the Couch\nEnter '5' to check the Loveseat\nEnter  Leave the Living Room\n'0' to Quit the program");
             var livingRoomChoice = Int32.Parse(Console.ReadLine());
 
             switch (livingRoomChoice)
@@ -133,7 +133,11 @@ namespace HouseFirst
                     break;            
                 case 5:
                     ItemSearches.nothing();
-                    break;                
+                    break;
+                case 6:
+                    WriteLine("You return to the Entry.");
+                    entryway();
+                    break;                  
                 default:
                     WriteLine("You have exited the program.");
                     break;
