@@ -9,13 +9,12 @@ namespace HouseFirst
         public static void entryway()
         {
             
-            WriteLine("The entryway is a small, square room. There was a coat rack in the far left corner, a couple of generic art pictures hung on the wall, and not else to the room. The room itself was fairly dark; sunlight, coming in from windows in the front door, was the only source of light in the entry.");
-            WriteLine("Directly ahead of you, a hall leads into the gloom. To your left, a thick, cherry-colored door stands, closed. To your right, another door stands, although this door is more of a generic color, and not nearly as thick.");
+            WriteLine("The entryway is a small, square room. \nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself was fairly dark; sunlight, coming in from windows in the front door, was the only source of light in the entry.");
+            WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more of a generic color, and not nearly as thick.");
             WriteLine("Press 'Enter to continue.");
-
             Console.ReadLine();
 
-            WriteLine("You have a few choices. What would you like to do?");
+            WriteLine("You have a few choices to make. What would you like to do?");
             WriteLine("Enter '1' to check the Left Door\nEnter '2' to check the Right Door\nEnter '3' to choose the Hall\nEnter '0' to end the program");
             var choiceEntry = Int32.Parse(ReadLine());
 
@@ -47,14 +46,13 @@ namespace HouseFirst
             WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
             Console.ReadLine();
             Console.Clear();
-            WriteLine("It is a Study, and a well-lit, well-furnished one. There is a very large window on the wall to your left. A long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. On the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
-            WriteLine("There is no other door leading into, or out of, the room, other than the one you're stand ing at. Press 'Enter' to Continue.");
+            WriteLine("It is a Study, and a well-lit, well-furnished one. There is a very large window on the wall to your left. \nA long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. \nOn the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
+            WriteLine("There is no other door leading into, or out of, the room, other than the one you're standing at. Press 'Enter' to Continue.");
             Console.ReadLine();
 
             WriteLine("What would you like to do?");
-            var studyChoice = Int32.Parse(Console.ReadLine());
-
             WriteLine("Enter '1' to check the Bookcases\nEnter '2' to check one of the tables\nEnter '3' to return to the Entry\nAnything else to Quit the program");
+            var studyChoice = Int32.Parse(Console.ReadLine());
 
             switch (studyChoice)
             {
@@ -65,6 +63,7 @@ namespace HouseFirst
                 case 2:
                     WriteLine("You check the small tables. You find nothing of interest or value. Press 'Enter' to continue and return to the Study.");
                     Console.ReadLine();
+                    study();
                     break;
                 case 3:
                     // return to the Entry
@@ -82,20 +81,34 @@ namespace HouseFirst
             // right door
             Console.Clear();
             WriteLine("You open the door and enter the Living Room.");
-            WriteLine("The room is in a state of disrepair.\n You see a large grey couch, laying on it's side in the center of the room. A loveseat is also laying on its side, next to the couch.\nTo the left, there is a mantle piece against the far left wall. In front of the Mantle are the remains of what appears to be a coffee table - it looks like it was thrown against the mantle.");
-            WriteLine("There are two, normal-sized windows on the wall across from the door, with some odds and ends on the floor, possibly from the coffee table.\nLooking at the Mantle: to its left, there is a set of stairs that lead up.");
+            WriteLine("There are two, normal-sized windows on the wall across from the door, with some odds and ends on the floor\nThere is a set of stairs that lead up, placed in the left corner of the room.");
+            WriteLine("The room itself is in a state of disrepair.\n You see a large gray couch, laying on it's side, in the center of the room. A loveseat is also laying on its side, next to the couch. \nThere is a Mantle piece against the far left wall.\nIn front of the Mantle are the remains of what appears to be a coffee table - it looks like it was thrown against the Mantle. There is a large hole in the right wall but no indication of what made that hole.");
+            
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
-            WriteLine("What would you like to do?");
-            var livingRoomChoice = Int32.Parse(ReadLine());
+            WriteLine("There are a few options - what would you like to do?");
 
-            WriteLine("Enter '1' to check the Mantle\nEnter '2' to look out the Closest Window\nEnter '3' to look out the Far Window\nEnter '4' to check the Couch\nEnter '5' to check the Loveseat\nEnter Any Other Character to Quit the program");
+            WriteLine("Enter '1' to examine the Mantle\nEnter '2' to look out the Closest Window\nEnter '3' to look out the Far Window\nEnter '4' to check the Couch\nEnter '5' to check the Loveseat\nEnter '0' to Quit the program");
+            var livingRoomChoice = Int32.Parse(Console.ReadLine());
 
             switch (livingRoomChoice)
             {
                 case 1:
                     // Mantle - picture, info
+                    WriteLine("You walk over to the Mantle, being careful to not trip over the remains of the Coffee Table. Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    WriteLine("There isn't anything special about the Mantle itself. \nOn top of the Mantle, you find a few bills and other random pieces of paper: 2 or 3 receipts, a menu, and some scribbed notes of no importance.\nYou, however, do see a canle holder; odd, because it appears to be fastened to the Mantle.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+
+                    WriteLine("You grab hold of the candle holder... and it folds in half! As it folds, you hear a shifting of... wood? Stone? from elsewhere in the house. You definitely file that in the memory banks and continue on. ");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    livingRoom();
                     break;
                 case 2:
                     // Window - near
@@ -189,6 +202,7 @@ namespace HouseFirst
                 Door Ahead: Dining Room (BackHouse)
                 New Hall - put in Back House
                 */
+            
             var hallChoice = Int32.Parse(Console.ReadLine());
 
             switch (hallChoice)

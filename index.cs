@@ -28,6 +28,7 @@ namespace FirstFloor
             
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
+            Console.Clear();
             FrontHouse.entryway();
 
         }

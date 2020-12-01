@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/newmac/Desktop/Haunted-House-2/Haunted-House-2.csproj": {}
+    "F:\\Haunted_House_2\\Haunted-House-2.csproj": {}
   },
   "projects": {
-    "/Users/newmac/Desktop/Haunted-House-2/Haunted-House-2.csproj": {
+    "F:\\Haunted_House_2\\Haunted-House-2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/newmac/Desktop/Haunted-House-2/Haunted-House-2.csproj",
+        "projectUniqueName": "F:\\Haunted_House_2\\Haunted-House-2.csproj",
         "projectName": "Haunted-House-2",
-        "projectPath": "/Users/newmac/Desktop/Haunted-House-2/Haunted-House-2.csproj",
-        "packagesPath": "/Users/newmac/.nuget/packages/",
-        "outputPath": "/Users/newmac/Desktop/Haunted-House-2/obj/",
+        "projectPath": "F:\\Haunted_House_2\\Haunted-House-2.csproj",
+        "packagesPath": "C:\\Users\\ZuriB\\.nuget\\packages\\",
+        "outputPath": "F:\\Haunted_House_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/newmac/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ZuriB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
