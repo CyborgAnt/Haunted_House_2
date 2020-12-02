@@ -30,7 +30,7 @@ namespace HouseFirst
                     livingRoom();
                     break;
                 case 3:
-                    hall();
+                    FrontHouse.hallway();
                     break;    
                 default:
                     ItemSearches.nothing();     //will cut back on repetitive code
@@ -167,11 +167,11 @@ namespace HouseFirst
             {
                 case 1:
                     //Bathroom
-
+                    bathroom();
                     break;
                 case 2:
                     //Bedroom Closet - nothing
-
+                    ItemSearches.nothing();
                     break;
                 case 3:
                     //Cabinet - ?
@@ -188,7 +188,7 @@ namespace HouseFirst
             }
         }
 
-        public static void hall()
+        public static void hallway()
         {
             Console.Clear();
             WriteLine("You start down the Hall.");
@@ -199,28 +199,28 @@ namespace HouseFirst
             Console.ReadLine();
 
             WriteLine("What would you like to do?");
-            /* switch-cases:
-                Door 1: Closet 1 - nothing
-                Door 2: Closet 2 - Hand Encounter
-                Door 3: Utility Closet - ?
-                Door Ahead: Dining Room (BackHouse)
-                New Hall - put in Back House
-                */
+            WriteLine("Enter '0' to Quit the program\nEnter '1' to check the nearest Door\nEnter '2' to check the Middle Door\nEnter '3' to check the Far Door\nEnter '4' to continue to the End of the Hall");            
             
             var hallChoice = Int32.Parse(Console.ReadLine());
 
-            switch (hallChoice)
+            switch(hallChoice)
             {
                 case 1:
-                    Encounters.hand();
+                    Encounters.hallCloset2();
                     break;
-
-
+                case 2:
+                    ItemSearches.nothing();
+                    break;
+                case 3:
+                    ItemSearches.nothing();         // change/update 
+                    break;
+                case 4:
+                    Backhouse.tHall();
+                    break;    
                 default:
                     WriteLine("You have exited the program.");
                     break;
             }
-
         }
 
         public static void bathroom()
@@ -240,22 +240,22 @@ namespace HouseFirst
     {
         public static void tHall()
         {
-
+            WriteLine("Code to come!");
         }
 
         public static void masterBedroom()
         {
-
+            WriteLine("Code to come!");
         }
 
         public static void diningRoom()
         {
-
+            WriteLine("Code to come!");
         }
 
         public static void kitchen()
         {
-
+            WriteLine("Code to come!");
         }
     }
 }

@@ -5,16 +5,49 @@ using static System.Math;
 
 class Encounters
 {
-    public static void hand()
-    {
-        //need to be 'Public'?
-
-    }    
-
     public static void hallCloset2()
     {
         //reuse code from original
+        // initializing variables for the encounter
+        int playerRoll = 0;
+        int closetRoll = 0;
+        var rand = new Random();
 
+        Console.WriteLine("As you open the closet door, you see a ghostly hand reach for you!");
+        Console.WriteLine("Pick a number between 1 and 20, to see if you dodge the hand...: ");
+        playerRoll = Int32.Parse(Console.ReadLine());
+        closetRoll = 5 + rand.Next(1, 21);       // SHOULD generate a random integer between 1 and 20
+
+        if(playerRoll > closetRoll)
+        {
+            Encounters.handSurvived();
+        } else if((playerRoll - closetRoll) <= -5) {
+            Encounters.handDeath();
+        } else {
+            Encounters.handPassedThrough();
+        }
+
+    }
+
+    public static void handDeath()
+    {
+        Console.WriteLine("You try to dodge the hand but it is too quick. It latches onto your face. Black, smoky tendrils erupt from the hand and wrap around your head. You sink to the ground as your life essence is drained away. You hear a deep, sinister laughter accompanying you into darkness....");
+        System.Environment.Exit(0);    // is this right?
+    }
+    public static void handPassedThrough()
+    {
+        Console.WriteLine("The hand reaches for your chest... and passes through it. There were no physical effects but you are pretty shaken up. You hear, in the distance, a low, ominous chuckle. You continue on.");
+        Console.WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+        HouseFirst.FrontHouse.hallway();
+    }
+    public static void handSurvived()
+    {
+        Console.WriteLine("The hand reaches for you... but you manage to dodge to one side. It passes through the wall of the hallway, and disappears. You hear a short but low chuckle from... somewhere. You decide to continue with the hall... ");
+        Console.WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+        HouseFirst.FrontHouse.hallway();
+        // test this decision
     }
 
     public static void window2()
@@ -108,7 +141,7 @@ class Encounters
 
         WriteLine("The Ghoul reaches out for you again. However, the claws don't grab your shoulders:\nThey go through your back and out through your chest.");
         WriteLine("There is a sharp pain... then a numbness. You are left wondering why there is a Ghoul in the yard, in the first place, as your consciousness fades to black....");
-        
+        System.Environment.Exit(0);  
     }
 
     public static void ghoulRun()
@@ -132,9 +165,9 @@ class Encounters
          while((ghoulHealth> 0) || (playerHealth > 0))
         { 
             if(playerHealth <= 0)
-                    //playerDead();
+                playerDead();
             if(ghoulHealth <= 0)
-                    //ghoulDead();     
+                ghoulDead();     
                 
             Console.WriteLine("You have {0} Hit Points, while the Ghoul has {1} Hit Points.", playerHealth, ghoulHealth);
                 
@@ -184,7 +217,8 @@ class Encounters
 
     public static void playerDead()
     {
-        WriteLine("You fall to the ground after the Ghoul's latest claw swipe. You have been cut and slashed in many places, some of the slashes really deep.\nYou try to crawl away but the Ghoul stops you. It licks you up by the back of your shirt and tosses you into the tree line.\You black out as you impact a particularly large tree.\n You don't see or feel it - thankfully - when the Ghoul reaches you body and chomps down on your torso.");
+        WriteLine("You fall to the ground after the Ghoul's latest claw swipe. You have been cut and slashed in many places, some of the slashes really deep.\nYou try to crawl away but the Ghoul stops you. It licks you up by the back of your shirt and tosses you into the tree line.\nYou black out as you impact a particularly large tree.\n You don't see or feel it - thankfully - when the Ghoul reaches you body and chomps down on your torso.");
+        System.Environment.Exit(0); 
     }
 
     public static void ghoulDead()
