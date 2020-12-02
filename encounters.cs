@@ -188,7 +188,7 @@ class Encounters
                 Console.ReadLine();
                 Console.Clear();
 
-                WriteLine("You put off your search of the Adams Manor.\nYou need to do a whole lot more research on the Manor, more than what you did in preparation for this first search.\You also decide to see what can slow or stop a Ghoul.\nFor now, you enjoy the recently-arrived coffee and plan your next steps.");
+                WriteLine("You put off your search of the Adams Manor.\nYou need to do a whole lot more research on the Manor, more than what you did in preparation for this first search.\nYou also decide to see what can slow or stop a Ghoul.\nFor now, you enjoy the recently-arrived coffee and plan your next steps.");
                 System.Environment.Exit(0);
                 break;        
 
