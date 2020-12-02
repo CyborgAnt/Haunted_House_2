@@ -47,7 +47,6 @@ class Encounters
         Console.WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
         HouseFirst.FrontHouse.hallway();
-        // test this decision
     }
 
     public static void window2()
@@ -146,6 +145,57 @@ class Encounters
 
     public static void ghoulRun()
     {
+        WriteLine("You see something that shouldn't be REAL and definitely shouldn't be standing in front of you... so you decide to run!");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+        Console.Clear();
+
+        WriteLine("You run around the side of the house, towards the front porch. You hear the Ghoul shuffling after you but you can't tell how close it is.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+        Console.Clear();
+
+        WriteLine("You arrive back in the front yard. Your car is parked nearby; the front door of the house is also close.\nWhat do you want to do?");
+        WriteLine("\nEnter '1' to Run back to the House\nEnter '2' to Run to your Car\nEnter '3' to keep running\nEnter '0' to quit the program");
+
+        var chaseChoice = Int32.Parse(Console.ReadLine());
+
+        switch (chaseChoice)
+        {
+            case 1:
+                //back into the house
+                WriteLine("You sprint towards the front porch.\nYou stop in the Entry, trying to slow your rapidly beating heart and fast breathing.");
+                WriteLine("Press 'Enter' to continue.");
+
+                WriteLine("You poke your head back out the door... and do not see the Ghoul in sight.\nYou close the door, hesitate, then go back to searching the house.");
+                WriteLine("You return to the Living Room. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                HouseFirst.FrontHouse.livingRoom();
+                break;
+            case 2:
+                //to the car
+                break;
+            case 3:
+                //keep running - ghoul stops
+                WriteLine("You keep running, ignoring your car AND the House.");
+                WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("You run across the street and head towards an open cafe.\nYou enter, slightly startling a waitress. You compose yourself - while glancing outside for pursuit- and taker a seat.\n\nYou do not see any sign of the Ghoul but that only slightly eases your fears.");
+                WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("You put off your search of the Adams Manor.\nYou need to do a whole lot more research on the Manor, more than what you did in preparation for this first search.\You also decide to see what can slow or stop a Ghoul.\nFor now, you enjoy the recently-arrived coffee and plan your next steps.");
+                System.Environment.Exit(0);
+                break;        
+
+            case 0: default:
+                WriteLine("You have exited the program.");
+                break;
+        }
 
     }
 
