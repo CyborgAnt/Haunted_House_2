@@ -133,6 +133,7 @@ namespace HouseFirst
                     break;            
                 case 5:
                     ItemSearches.nothing();
+                    livingRoom();
                     break;
                 case 6:
                     WriteLine("You return to the Entry.");
@@ -240,12 +241,129 @@ namespace HouseFirst
     {
         public static void tHall()
         {
-            WriteLine("Code to come!");
+            WriteLine("You continue down the main hall until you reach the T-intersection. Press 'Enter' to continue.");
+            Console.ReadLine();
+            WriteLine("There are 3 main choices that you see:\n1. Straight ahead, there is a closed door.\n2. To your left, the hall continues a short distance until ending at a wall. On the left side of that hall branch, there are two doors: one opens onto what looks like a Bathroom, the other door was closed.\nOn the right side of that hall branch is another door, across from the closed door on the left.\n3. To your right, the hall ends at a door to the outside. On the right side, there is an opening that leads to what looks like a Kitchen.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+            WriteLine("What do you do?");
+            WriteLine("Enter '1' to take the Left Hall and check the Right Door\nEnter '2' to take the Left Hall and check the Left Door\nEnter '3' to take the Left Hall and check the Bathroom\nEnter '4' to Check the Door Ahead\nEnter '5' to take the Right Hall and check the Left Door\nEnter '6' to Check the door to the Outside\nEnter '7' to go back to the Entry");
+
+            var tHallChoice = Int32.Parse(Console.ReadLine());
+
+            switch (tHallChoice)
+            {
+                case 1:
+                    // Left - Right Door
+                    // Master Bedroom
+                    WriteLine("You turn down the left branch of the new hallway.\nYou decide to see what's behind the door on the right. Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    masterBedroom();
+                    break;
+                case 2:
+                    // Left - Left Door
+                    // Bedroom
+                    HouseFirst.FrontHouse.bedroom();
+                    break;
+                case 3:
+                    // Left - Bathroom
+                    WriteLine("You decide to take the left hallway. You check the Bathroom.\nPress 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    HouseFirst.FrontHouse.bathroom();
+                    break;
+                case 4:
+                    // Dining Room
+                    diningRoom();
+                    break;
+                case 5:
+                    // Right - Left Door
+                    kitchen();
+                    break;
+                case 6:
+                    // Outside
+                    break;
+                case 7:
+                    // Back to the Entry
+                    FrontHouse.entryway();
+                    break;        
+                default:
+                    break;
+            }        
         }
 
         public static void masterBedroom()
         {
-            WriteLine("Code to come!");
+            Console.Clear();
+            WriteLine("You enter the Master Bedroom.\nThis bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; it's doors are closed. There is a faint odor coming from the wardrobe's direction.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+            WriteLine("\nIn the center of the room is a canopied, King-sized bed, adorned with light blue sheets and a comforter.\nThere are also a few pieces of furniture - a couple of night stands, a dresser, and a small desk - that catch your eye but don't appear to have anything of importance or note on them.\nThere is a window on the left wall, near the Closet, and a larger window on the far wall, between the Closet and the Bathroom.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+            WriteLine("What would you like to do?");
+            WriteLine("1. Leave the Master Bedroom and go back to the T-intersection\n2. Check the Closet\n3. Check the Large Window\n4. Check the Bathroom\n5. Check the Wardrobe\n0. Quit the Program");
+
+            var mbrChoice = Int32.Parse(Console.ReadLine());
+
+            switch(mbrChoice)
+            {
+                case 1:
+                    WriteLine("You decide to leave the Master Bedroom and head back to the hallway intersection.\n");
+                    tHall();
+                    break;
+                case 2:
+                    //closet
+                    WriteLine("You walk over to the closet.\nThere are some jackets, coats, and other clothing odds and ends, hanging on the closet bar.\nOn a shelf above the clothes, there is a hat, some small boxes and a few small plastic containers, filled with knick-knacks. In front of one of these containers is a rectangular box.");
+                    
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    WriteLine("You take a closer look at the box - it's a box of 20 bullets. Opening the box, you see that these are SILVER BULLETS.\n");
+                    bool silverBullets = true;      // used in Final Battle
+                    WriteLine("You take the box, although you're now wondering why someone would need a specific type of bullet, much less 20 of them. Nothing else of interest is in the closet, so you return your attention to the Master Bedroom.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    masterBedroom();
+                    break;
+                case 3:
+                    //window - nothing
+                    ItemSearches.nothing();
+                    break;
+                case 4:
+                    //bathroom - use code from FrontHouse
+                    HouseFirst.FrontHouse.bathroom();
+                    break;
+                case 5:
+                    //wardrobe - body, note, code
+                    WriteLine("You inspect the Wardrobe.\nAs you walk closer, the faint odor grows stronger and more unpleasant.\n You open the Wardrobe...");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+
+                    WriteLine("... and a body tumbles out!");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+
+                    WriteLine("The body is of a man, over 6 feet tall, with salt-and-pepper hair, a thin build, and a not-quite-middle-aged face.\nHis shirt appears to have been shredded, along with the torso underneath!\n");
+                    WriteLine("You inspect the body. You find a piece of paper inside the front right pocket. On it, in a small, hurried-looking print is this:\n\n'She dabbled too deep! She is now a Lou-");
+                    WriteLine("The note is torn off at that point.\nYou don't know what a 'Lou' is but whatever it is, it was stron enough to kill a man and stuff him in a wardrobe.\n\nYou take the Note and pocket it, then put the body back into the Wardrobe - gruesome work.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    masterBedroom();
+                    break;
+                case 0: default:
+                    WriteLine("You have exited the program.");
+                    break;                    
+
+
+            }
         }
 
         public static void diningRoom()
