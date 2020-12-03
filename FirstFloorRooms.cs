@@ -368,12 +368,86 @@ namespace HouseFirst
 
         public static void diningRoom()
         {
-            WriteLine("Code to come!");
+            Console.Clear();
+            WriteLine("You open the door ahead and peer in.\n\nIt is a Dining Room.\nIt is a very nice Dining Room, too! The main feature is the cherry room table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside, right now, is the light from the full moon.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+            WriteLine("There is an elaborate, crystalline chandleer hanging from the ceiling; the lights are on.\n There a couple of chairs in the far right corner of the room.\nYou don't see anything else of significance but you do have the oddest feeling: 'this room is... safe'.\n\nYou leave the Dining Room and return to the T-intersection.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            tHall();
+
         }
 
         public static void kitchen()
         {
-            WriteLine("Code to come!");
+            WriteLine("You take the right branch of the new hallway and go to the door on the left.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("You enter the Kitchen.\n You use your flashlight to locate the light switch; you flip the switch.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+            WriteLine("As the lights come on, two things immediately strike you: this room gives off a 'bad' vibe, and that vibe is coming from the stairs.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("The stairs are set into the wall to your right, in the far corner, leading down into darkness. Red streaks run between the entrance door and the stairs; you are certain that they are blood stains.\nThe rest of the Kitchen isn't much better.\nOn the left wall, there is - WAS - a door, leading to the Dining Room; that door is now laying on the floor, shattered by some extreme force.\nThere is a kitchen island in the center of the room, with 4 high-backed stools set on the end closest to you.\nCabinets are mounted on 3 of the walls - only the wall to your left is void of them.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            
+            WriteLine("A lot of the cabinet doors are cracked, have scratches in them, and a myriad of other types of damage to them.\nThere are more 'red stains' on the floor, in the sink, and on top of a stove against the wall to the right. The stove also has something written on the oven door.\nThere are broken dishes in the sink and on the floor, in front of the sink.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+            WriteLine("What do you want to do next?");
+            WriteLine("'1' to examine the Kitchen Island\n'2' to examine the Stove and Oven\n'3' to examine the Cabinets\n'4' to check out the Stairs\n'5' to exit the Kitchen\n'0' to Quit the Program");
+
+            var kitchenChoice = Int32.Parse(Console.ReadLine());
+
+            switch (kitchenChoice)
+            {
+                case 1:
+                    //kitchen island
+                    WriteLine("You take a closer look at the Kitchen Island.\nThere's nothing remarkable about the stools surrounding the island.\nOn top of the island itself, there is a science magazine, a newspaper, and some sheets of paper with various writings and drawings on them.\nOn one of these sheets is a series of figures: a triangle, with circles drawn around the points of each triangle, and each circle is a different color: red, blue, green.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    WriteLine("The other sheet of paper is a clipping of a newspaper article from 3 days ago. It is one of those articles that yoy find in the 'Communities' section; this one deals with some of the superstitions about the Full Moon.\nAn interesting article, you pocket the article and drawings and continue in the Kitchen.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    kitchen();
+                    break;
+                case 2:
+                    //Stove; code
+                    WriteLine("Code to come!");
+                    break;
+                case 3:
+                    //Cabinets
+                    WriteLine("Code to come!");
+                    break;
+                case 4:
+                    //stairs
+                    //start of 'Basement' namespace
+                    WriteLine("Code to come!");
+                    break;
+                case 5:
+                    WriteLine("You decide to leave the Kitchen - you don't trust the feeling coming from the stairs.\nYou back to the T-intersection to gather your thoughts.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();   
+                    tHall();
+                    break;  
+                case 0: default:
+                    WriteLine("You have exited the program.");
+                    break;
+            }
         }
     }
 }
