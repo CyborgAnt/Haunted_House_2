@@ -86,7 +86,6 @@ class Encounters
                 WriteLine("Dazed, you hurry to your feet. Standing near you is... something not human. For starters, it's arms are entirely too long and end in a set of claws. The body is compact but still well over 5 feet tall, with tattered remains of clothes clovering it.\nThe head is humanoid but the mouth is full of sharp, canine-like teeth. It's eyes are cunning lacking remorse.");
                 WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
-                Console.Clear();
                 WriteLine("What yanked you out of the window is something you've only seen in movies: a Ghoul!\n");
                 WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
@@ -201,8 +200,9 @@ class Encounters
 
     public static void ghoulShoot()
     {
-        Console.Clear();
-        WriteLine("'In this encounter, you and the Ghoul have hidden armor values.\nYou both also have attacks ('Shoot' for you, 'Claw' for the Ghoul); a random-generated number, from 1-20, is used for the attack value.\nIf your attack value is greater than or equal to the other's armor, you make a succesful attack and deal damage. The first one to bring their opponent's health to 0 (or less) wins!'\n\nPress 'Enter' to continue.");
+        WriteLine("\nYou pull your gun, ready to defend yourself from this creature...\n");
+
+        WriteLine("'In this encounter, you and the Ghoul will take turns attacking each other (you with 'Shoot', the Ghoul with 'Claw'). You and the Ghoul also have hidden armor values.\nA random-generated number, from 1-20, is used for the attack value, simulating a 20-sided dice roll.\nIf your attack value is greater than or equal to the other's armor, you make a succesful attack and deal damage.\nThe first one to bring their opponent's health to 0 (or less) wins!'\n\nPress 'Enter' to continue.");
         Console.ReadLine();
 
         //variables for the encounter
@@ -227,7 +227,7 @@ class Encounters
             Random rd = new Random();
             int roll = rd.Next(1, 21);      // simulating a 20-sided die roll
             Random dmg = new Random();
-            int damage = dmg.Next(1,7);     // 1-6 points of damage per shot
+            int damage = dmg.Next(1,9);     // 1-8 points of damage per shot
 
             if(roll >= ghoulArmor)
             {		
@@ -248,7 +248,7 @@ class Encounters
             Random rl = new Random();
             int rollG = rl.Next(1, 21);
             Random dmgg = new Random();
-            int ghoulDmg = dmgg.Next(1,9);     // 1-8 points of damage per attack
+            int ghoulDmg = dmgg.Next(2,9);     // 2-8 points of damage per attack
 
             if(rollG >= playerArmor)
             {
@@ -267,7 +267,11 @@ class Encounters
 
     public static void playerDead()
     {
-        WriteLine("You fall to the ground after the Ghoul's latest claw swipe. You have been cut and slashed in many places, some of the slashes really deep.\nYou try to crawl away but the Ghoul stops you. It licks you up by the back of your shirt and tosses you into the tree line.\nYou black out as you impact a particularly large tree.\n You don't see or feel it - thankfully - when the Ghoul reaches you body and chomps down on your torso.");
+        WriteLine("You fall to the ground after the Ghoul's latest claw swipe.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+        
+        WriteLine("You have been cut and slashed in many places, some of the slashes really deep.\nYou try to crawl away but the Ghoul stops you. It licks you up by the back of your shirt and tosses you into the tree line.\nYou black out as you impact a particularly large tree.\n You don't see or feel it - thankfully - when the Ghoul reaches you body and chomps down on your torso.");
         System.Environment.Exit(0); 
     }
 
@@ -283,10 +287,10 @@ class Encounters
         bool wallet = true;     // player found the wallet; useful in next-to-last room
 
         WriteLine("You take a few moments to steady yourself.\nYou then head back to the window that you were unceremoniously yanked out of, and climb back in.");
-        HouseFirst.FrontHouse.livingRoom();
-
+        WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
+        HouseFirst.FrontHouse.livingRoom();
 
     }
 }

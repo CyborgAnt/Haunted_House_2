@@ -426,11 +426,24 @@ namespace HouseFirst
                     break;
                 case 2:
                     //Stove; code
-                    WriteLine("Code to come!");
+                    WriteLine("You inspect the stove closer.\nThe writing on the stove is a set of numbers:\n'7520'.\nPress 'Enter' to continue with the Kitchen Search.");
+                    Console.ReadLine();
+                    kitchen();
                     break;
                 case 3:
                     //Cabinets
-                    WriteLine("Code to come!");
+                    WriteLine("You check each wall of cabinets, starting with the wall to the right, going counterclockwise.\n");
+                    WriteLine("These cabinets, sitting above the stove, contain spices and condiments, containers of what look like cereals and oatmeal, and containers of flour. Nothing else of interest is in these cabinets.");
+                    WriteLine("The middle set of cabinets contain dishes, plastic containers, glasses, and cups. Nothing else catches your eye. Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    WriteLine("The last set of cabinets contains canned goods, various jarred foods, and some various snack crackers. On top of some of the canned goods is a piece of folded paper. It is a newspaper article from last month, with the title:\n'3 More Mutilated Bodies Found'.\n");
+                    WriteLine("The article states that 12 bodies have now been found in the last 3 months: 3 last month, 5 the month before, 4 the month before that. They all have been found 1-2 nights before the full moon... and most have been found in the neighborhood of the Adams Manor.\nUh oh.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    WriteLine("You pocket the news article.\nYou continue the Kitchen search.");
+                    kitchen();
                     break;
                 case 4:
                     //stairs
