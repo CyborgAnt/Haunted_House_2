@@ -1,6 +1,10 @@
 //second floor
 //intro code
 
+using System;
+using System.Text;
+using static System.Console;
+
 class SecondFloorRooms
 {
     public static void stairs()
@@ -30,7 +34,7 @@ class SecondFloorRooms
                 break;
             case 3:
                 //Left - Hall
-                hallLeft();
+                SecondFloorHalls.hallLeft();
                 break;
             case 4:
                 //Right - BTWall
@@ -38,7 +42,7 @@ class SecondFloorRooms
                 break;
             case 5:
                 //Right - Hall
-                hallRight();
+                SecondFloorHalls.hallRight();
                 break;
             case 6:
                 //Stairs
@@ -119,7 +123,7 @@ class SecondFloorRooms
         Console.ReadLine();
         Console.Clear();
 
-        WriteLine("There are plenty of single and bundled wires, cords, and thicker, woven cables, running down (and into) the walls, and along the ceiling.\nThere are also, in regular intervals, small wooden shelves, set into the walls; on these shelves are various small tools, clamps, and fasteners. In a few spaces, there are also small work benches, with various tools, manuals, and papers on them.\This is a makeshift work shop.");
+        WriteLine("There are plenty of single and bundled wires, cords, and thicker, woven cables, running down (and into) the walls, and along the ceiling.\nThere are also, in regular intervals, small wooden shelves, set into the walls; on these shelves are various small tools, clamps, and fasteners. In a few spaces, there are also small work benches, with various tools, manuals, and papers on them.\nThis is a makeshift work shop.");
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
@@ -130,7 +134,7 @@ class SecondFloorRooms
 
         WriteLine("'1' to Inspect the Purple Box\n'2' to Check out the Manual\n'3' to Check the other Small Shelves\n'4' to Check the other Work Benches\n'5' to Check the Room\n'6' to Leave the Room through either Door\n'0' to Quit the Program");
 
-        var btwChoice = int32.Parse(Console.ReadLine());
+        var btwChoice = Int32.Parse(Console.ReadLine());
 
         switch (btwChoice)
         {
@@ -147,7 +151,6 @@ class SecondFloorRooms
                 WriteLine("Code is coming!");
                 break;
             case 4:
-                case 1:
                 //work benches - code on paper, drawings?
                 WriteLine("Code is coming!");
                 break;
@@ -166,7 +169,8 @@ class SecondFloorRooms
 
             case 0: default:
                 WriteLine("You have exited the Program.");
-                System.Environment.Exit(0); 
+                System.Environment.Exit(0);
+                break;
 
         }
 
@@ -174,24 +178,21 @@ class SecondFloorRooms
     }
 }
 
-class secondFloorHalls
+class SecondFloorHalls
 {
     public static void hallLeft()
     {
         //Hallway to the left of the floor
         WriteLine("Code is coming!");
-        break;
     }
     public static void hallRight()
     {
         //Hallway to the right of the floor
         WriteLine("Code is coming!");
-        break;
     }
     public static void hallBottom()
     {
         //Hallway to the bottom of the floor
         WriteLine("Code is coming!");
-        break;
     }
 }

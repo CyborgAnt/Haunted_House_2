@@ -144,7 +144,8 @@ namespace HouseFirst
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-                    SecondFloor.stairs();       // start of the 2nd floor
+                    SecondFloorRooms.stairs();       // start of the 2nd floor
+                    break;
 
                 default:
                     WriteLine("You have exited the program.");
