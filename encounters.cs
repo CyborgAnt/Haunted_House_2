@@ -174,6 +174,49 @@ class Encounters
                 break;
             case 2:
                 //to the car
+                WriteLine("You decide to make a run for you car.\nYou sprint towards the driver's side door, yank it open, and dive inside. You sit up, start the car, and look out the windshield.\nThe Ghoul is shambling towards the car, although it's not terribly choice.\n\nWhat do you do? Press 'Enter to Continue.");
+
+                Console.ReadLine();
+                WriteLine("'1' to Drive Away'\'2' to Attempt to Run Over the Ghoul\n");
+
+                var carChoice = Int32.Parse(Console.ReadLine());
+                switch (carChoice)
+                {
+                    case 1:
+                        //Drive Away
+                        WriteLine("You have had enough. Seeing a Ghoul - WHICH SHOULD NOT BE REAL - is more than you signed up for. Press 'Enter' to continue.");
+                        Console.ReadLine();
+                        Console.Clear();
+
+                        WriteLine("As the Ghoul shambles closer, you start your car, put it in Reverse, and peel out.\nYou shift into Drive and roar away from the Adams Manor. You realize that you didn't find a definitive, explanable answer for the sights and noises at the Manor... key word being 'explanable'.");
+                        WriteLine("Nevertheless, you are alive. As you drive back to your office, you comtemplate going back to the Adams Manor in the future... and going back during the day.");
+                        System.Environment.Exit(0);
+                        break;
+                    case 2:
+                        //Run Over
+                        WriteLine("The Ghoul still shambles forward, but it has slowed down.\nYou decide to ram it with your car! Press 'Enter' to continue.");
+                        Console.ReadLine();
+                        Console.Clear();
+
+                        WriteLine("You floor the gas pedal, lining up the Ghoul. The impact is bone-jarring!\n");
+                        WriteLine("The impact throws you into the steering wheel, knocking the wind out of you. The Ghoul is knocked many feet backwards, landing with a loud 'Thud!'.\nIt lies, unmoving, near the front porch. Press 'Enter' to continue.");
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        WriteLine("You examine the body of the Ghoul. There are no discerning features on the body, such as scars.\nYou check the tattered clothing and find a wallet and some keys.\nInside the wallet, you find some cash, some random business cards, and an ID: \n\nBilly Adams\n10 Primrose Way\nAge: 21");
+                        WriteLine("You take the walley and keys and go back into the Manor.\n");
+                        HouseFirst.FrontHouse.entryway();
+
+                        break;
+                    default:
+                        WriteLine("You have exited the program.");
+                        break;
+                }
+
+
+
+
+
                 break;
             case 3:
                 //keep running - ghoul stops

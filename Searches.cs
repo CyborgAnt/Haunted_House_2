@@ -10,6 +10,7 @@ class ItemSearches
     {
         WriteLine("You find nothing of interest. Press 'Enter' to continue.");
         Console.ReadLine();
+        
     }
     
     public static void studyBookcases()

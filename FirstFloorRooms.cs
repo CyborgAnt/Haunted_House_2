@@ -42,11 +42,11 @@ namespace HouseFirst
         public static void study()
         {
             // left door
-            WriteLine("You open the door to the left.");
+            WriteLine("You open the door to the left and see a Study.");
             WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
             Console.ReadLine();
             Console.Clear();
-            WriteLine("It is a Study, and a well-lit, well-furnished one. There is a very large window on the wall to your left. \nA long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. \nOn the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
+            WriteLine("It is a well-lit, well-furnished one. There is a very large window on the wall to your left. \nA long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. \nOn the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
             WriteLine("There is no other door leading into, or out of, the room, other than the one you're standing at. Press 'Enter' to Continue.");
             Console.ReadLine();
 
