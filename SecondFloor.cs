@@ -65,7 +65,50 @@ class SecondFloorRooms
     public static void bedroom2()
     {
         //Statue-puzzle
-        WriteLine("Code coming soon!");
+        WriteLine("You open the door and look upon a sparse bedroom.\nThis room is... different. Press 'Enter' to continue.");
+
+        Console.ReadLine();
+        Console.Clear();
+
+        WriteLine("From the doorway, there is a bed to the left, against the wall. On the bed appears to be a note.\nAcross the room, in the right corner, is a 7-foot tall statue. The statue resembles a crouching Gargoyle, with its hands outstretched. In its left hand is what appears to be a stone box; the right hand is holding a sword, tip down.\n\nBetween the bed and the Gargoyle statue, on the floor, is a grid of numbers and letters. Press 'Enter' to continue.");
+
+        Console.ReadLine();
+
+        WriteLine("-----------------------");
+        WriteLine("|| A | 8 | 4 | 1 | G ||");
+        WriteLine("|| 9 | 7 | @ | 0 | 2 ||");
+        WriteLine("|| T | Q | 6 | 5 | 3 ||");
+        WriteLine("-----------------------");
+
+        WriteLine("What do you do next?\n");
+        WriteLine("'1' Check the Grid\n'2' Check the Bed\n'3' Check the Statue\n'4' Go back into the Hall");
+        var upperBedChoice = Int32.Parse(Console.ReadLine());
+
+        switch (upperBedChoice)
+        {
+            case 1:
+                //grid
+                WriteLine("Code coming soon!");
+                break;
+            case 2:
+                //bed - Note
+                WriteLine("Code coming soon!");
+                break;
+            case 3:
+                //Statue - check
+                WriteLine("You walk towards the Statue, being careful NOT to walk on the grid on the floor.\nYou walk around the Statue, looking for any kind of detail. You notice that there are scuff marks around the base of the statue, leading towards the door. You also notice that the right arm is hinged at the elbow and shoulder.\nThe box in the left hand hand looks solid - you don't see any visible lid or openings.\n\nYou walk back around the grid and head towards the door. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                bedroom2();
+                break;    
+            default:
+                WriteLine("You have exited the Program.");
+                System.Environment.Exit(0);
+                break;
+        }
+
+
+
     }
 
     public static void masterBedroom2()
