@@ -92,7 +92,31 @@ class SecondFloorRooms
                 break;
             case 2:
                 //bed - Note
-                WriteLine("Code coming soon!");
+                WriteLine("You walk over to the bed and take a closer look at the note.\n\nIt looks like some form of poetry or code. 'Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("Walk a path of 4, to open the box.\nMisstep and feel the wrath of Moon's Enforcer.\n\n2 steps to describe my soulmate, 2 steps for the year my son was born. The center will reveal your fate. Press 'Enter' to continue.");
+                Console.ReadLine();
+                
+                WriteLine("Do you step on the grid?\n'Y' or 'y' for 'Yes'\n'N' or 'n' for 'No");
+                var gridChoice = Console.ReadLine;
+                switch (gridChoice)
+                {   
+                    case 'Y': case 'y':
+                        grid();
+                        break;
+                    case 'N': case 'n':
+                        WriteLine("You pocket the Note but decide not to test out the Grid, yet. You return to the doorway to think things through.\n"); 
+                        bedroom2();
+                        break;
+                    
+                    default:
+                }
+
+
+
+
                 break;
             case 3:
                 //Statue - check

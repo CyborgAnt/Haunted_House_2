@@ -336,4 +336,9 @@ class Encounters
         HouseFirst.FrontHouse.livingRoom();
 
     }
+
+    public static void grid()
+    {
+        WriteLine("Code to come!");
+    }
 }
