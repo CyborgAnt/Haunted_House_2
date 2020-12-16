@@ -23,3 +23,9 @@ F:/Haunted_House_2/bin/Debug/netcoreapp3.1/Haunted-House-2.runtimeconfig.dev.jso
 F:/Haunted_House_2/bin/Debug/netcoreapp3.1/Haunted-House-2.dll
 F:/Haunted_House_2/bin/Debug/netcoreapp3.1/Haunted-House-2.pdb
 F:/Haunted_House_2/obj/Debug/netcoreapp3.1/Haunted-House-2.genruntimeconfig.cache
+F:\Haunted_House_2\obj\Debug\netcoreapp3.1\Haunted-House-2.csprojAssemblyReference.cache
+F:\Haunted_House_2\obj\Debug\netcoreapp3.1\Haunted-House-2.AssemblyInfoInputs.cache
+F:\Haunted_House_2\obj\Debug\netcoreapp3.1\Haunted-House-2.AssemblyInfo.cs
+F:\Haunted_House_2\obj\Debug\netcoreapp3.1\Haunted-House-2.csproj.CoreCompileInputs.cache
+F:\Haunted_House_2\obj\Debug\netcoreapp3.1\Haunted-House-2.dll
+F:\Haunted_House_2\obj\Debug\netcoreapp3.1\Haunted-House-2.pdb

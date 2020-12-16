@@ -7,6 +7,8 @@ using static System.Console;
 
 class SecondFloorRooms
 {
+    var orb = 0;
+
     public static void stairs()
     {
         //hub for the 2nd Floor
@@ -99,25 +101,22 @@ class SecondFloorRooms
                 WriteLine("Walk a path of 4, to open the box.\nMisstep and feel the wrath of Moon's Enforcer.\n\n2 steps to describe my soulmate, 2 steps for the year my son was born. The center will reveal your fate. Press 'Enter' to continue.");
                 Console.ReadLine();
                 
-                WriteLine("Do you step on the grid?\n'Y' or 'y' for 'Yes'\n'N' or 'n' for 'No");
-                var gridChoice = Console.ReadLine;
+                WriteLine("Do you step on the grid?\n'1' for 'Yes'\n'2' for 'No");
+                var gridChoice = Int32.Parse(Console.ReadLine());
                 switch (gridChoice)
                 {   
-                    case 'Y': case 'y':
-                        grid();
+                    case 1:
+                        Encounters.grid();
                         break;
-                    case 'N': case 'n':
+                    case 2:
                         WriteLine("You pocket the Note but decide not to test out the Grid, yet. You return to the doorway to think things through.\n"); 
                         bedroom2();
                         break;
                     
                     default:
+                        break;
                 }
-
-
-
-
-                break;
+            break;
             case 3:
                 //Statue - check
                 WriteLine("You walk towards the Statue, being careful NOT to walk on the grid on the floor.\nYou walk around the Statue, looking for any kind of detail. You notice that there are scuff marks around the base of the statue, leading towards the door. You also notice that the right arm is hinged at the elbow and shoulder.\nThe box in the left hand hand looks solid - you don't see any visible lid or openings.\n\nYou walk back around the grid and head towards the door. Press 'Enter' to continue.");
@@ -138,13 +137,89 @@ class SecondFloorRooms
     public static void masterBedroom2()
     {
         //bullets; secret door to Basement
-        WriteLine("Code coming soon!");
+        WriteLine("You enter the room from the Hall; you have to turn on your flashlight, first. \You locate the light switch, flick it up, and the room is illuminated. Press 'Enter' to continue.");
+
+        Console.ReadLine();
+        Console.Clear();
+
+        WriteLine("This is one of the biggest bedrooms you've seen! It could - and might have, at one time - double as a Studio apartment.\nFrom the doorway, there is a large bed in the left corner, next to a big window. Across from the bed, on the left side of the room, is a standing Wardrobe.\nAlmost directly across from the door is some sort of writing desk, with papers scattered on top of it; the desk sits in front of two parallel windows.\n Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("The right side of the room - looking from the doorway - is a little less furnished.\nThere is a bench against the wall, to the right of the door and on the opposite wall, next to the desk.\nThere is a doorway on the right wall - it opens onto a bathroom. To the right of the bathroom doorway, there is a closet, although you can't quite see what's in it. As you turn back around, you notice something sticking out of the wall, between the door and the bed. What do you do next?");
+
+        WriteLine("\n1. Check the Closet\n2. Check the Desk\n3. Check the Wardrobe\n4. Check the Object in the Wall\n5. Check the Bathroom\n6. Leave the Master Bedroom");
+        var MBR2 = Int32.Parse(Console.ReadLine());
+        Console.Clear();
+        switch (MBR2)
+        {
+            case 1:     //closet
+                WriteLine("You walk over to the Closet and look in.\nOther than standard clothes, you don't notice anything of importance. However, on the top shelf, you see a box of bullets.\nOpening the box, you see 20 SILVER BULLETS. You close the box, pocket it, and look around the room once more. Press 'Enter' to continue.");
+                silverBullets += 20;
+                Console.ReadLine();
+                Console.Clear();
+                masterBedroom2();
+                break;
+            case 2:     //desk
+                WriteLine("You check the papers on top of the desk.\nThere are seemingly random scribbles about 'The Gateway' and 'Twin Orbs' but there's not enough info to make much sense.");
+                WriteLine("You next check the bathroom.\nPress 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                bathroom3();
+                break;
+            case 3:     //Wardrobe - Orb
+                WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress on a hangar.\nYHowever, a closer look reveals a purple box on the ground, behind the shoes. You open the box to reveal...\n...a Dark Blue ORB. Press 'Enter' to continue.");
+
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("This may be what some writings you came across earlier were referring to: 'Twin Orbs'. If you haven't found it already, you might want to find the second Orb - it seems like it might be important.");
+                WriteLine("You decide on your next move, as you head back to the door. Press 'Enter' to continue.");
+
+                orb += 1;
+                Console.ReadLine();
+                Console.Clear();
+                masterBedroom2();
+                break;    
+            case 4:     //Object - Switch
+                WriteLine("You walk over to the object in the wall.\n\nIt is small, silver-colored, shaped like a dagger hilt, although the blade is missing.\nYou reach to grab it; as you grab it, the object slides into the wall!\nA section o0f the wall, between the Bathroom door and the corner, slides open, revealing a set of stairs that lead down. Do you descend the stairs? Enter '1' for Yes, anything else for 'No'": );
+                var stairsDown = Console.ReadLine();
+
+                if(stairsDown == '1')
+                {
+                    WriteLine("Code To Come!");
+                    // basement: wall near Gate
+
+                }
+                else
+                {
+                    WriteLine("You ignore the stairs... for the moment. You head back to the door. Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    masterBedroom2();
+                }
+                break;
+            case 5:     //bathroom
+                bathroom3();
+                break;
+            case 6:     //leave
+                WriteLine("You decide to go leave the room.");
+                SecondFloorHalls.hallRight();
+                break;
+
+            default:
+                WriteLine("You have exited the Program.");
+                System.Environment.Exit(0);
+                break;
+        }
+
     }
 
     public static void bathroom3()
     {
-        //Imp?
-        WriteLine("Code coming soon!");
+        WriteLine("You look into this room. It is another bathroom, although it's slightly smaller than the one you saw on the first floor.\nThere is nothing of particular interest, so you go back to the Master Bedroom. Press 'Enter' to continue.");
+        Console.ReadLine();
+        Console.Clear();
+        masterBedroom2();
     }
 
     public static void porch()
@@ -162,7 +237,7 @@ class SecondFloorRooms
     public static void upstairsCloset()
     {
         //info on Billy Adams; resurrected?
-        WriteLine("Code coming soon!");
+        WriteLine("You open the door and see a very large closet, almost a storage room. It is large enough enough for multiple people to be in at once, but not quite large enough for multiple pieces of furniture.\nYou notice boxes and crates everywhere. On top of a stack of furniture, you notice an odd pamphlet:\n'Resurrection and What To Beware Of'\n");
     }
 
     public static void mystery()
