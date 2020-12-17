@@ -21,9 +21,9 @@ namespace HouseFirst
             WriteLine("|                    |  |                       |");
             WriteLine("|--------------------|  |                       |");
             WriteLine("|                  --|  |---                    |");
-            WriteLine("|                  |       |                    |");
-            WriteLine("|                 \\ Entry \\                   |");
-            WriteLine("|------------------|--\\---|--------------------|");
+            WriteLine("|                  |      |                     |");
+            WriteLine("|                 \\ Entry \\                     |");
+            WriteLine("|------------------|--\\---|----------------------3|");
             
                         
             WriteLine("You have a few choices to make. What would you like to do?");
@@ -68,7 +68,7 @@ namespace HouseFirst
             WriteLine("|   Bookcases              |                    |");
             WriteLine("|                          |                    |");
             WriteLine("|          STUDY           |--|  |--|           |");
-            WriteLine("|                         \\  Entry \\           |");
+            WriteLine("|                         \\  Entry \\          |");
             WriteLine("|          window          |        |           |");
             WriteLine("|-----------------------------------------------|");
             WriteLine("What would you like to do?");
@@ -110,7 +110,7 @@ namespace HouseFirst
 
             WriteLine("|                                               |");
             WriteLine("|                ------------------------------ |");
-            WriteLine("|              |  | Stairs |                     |");
+            WriteLine("|             |  | Stairs |                     |");
             WriteLine("|             |  | --------               Window|");
             WriteLine("|             |  |       Living                 |");
             WriteLine("|-------------|  |        Room                  |");
@@ -194,13 +194,13 @@ namespace HouseFirst
             WriteLine("|--------\\--------------\\----|     ");
             WriteLine("|                   |          |     ");
             WriteLine("|                   | Bathroom |     ");
-            WriteLine("|     Bedroom      \\          |     ");
+            WriteLine("|     Bedroom       \\         |     ");
             WriteLine("|                   |          |     ");
-            WriteLine("| -----------------------------|     ");
+            WriteLine("|------------------------------|     ");
             WriteLine("|                              |     ");
             WriteLine("|                              |     ");
             WriteLine("|            STUDY             |     ");
-            WriteLine("|------------------------------      ");
+            WriteLine("|------------------------------|     ");
             
             WriteLine("What would you like to do next?");
 
@@ -254,12 +254,12 @@ namespace HouseFirst
             WriteLine("|       -------------\\---------");
             WriteLine("|                               ");
             WriteLine("|       -----------        -----");
-            WriteLine("|       | Util.  \\        |    ");
+            WriteLine("|       | Util.    \\       |    ");
             WriteLine("|       -----------        |    ");
-            WriteLine("|       |        \\        |    ");
+            WriteLine("|       |         \\        |    ");
             WriteLine("|       | Closet2 |        |    ");
             WriteLine("|       -----------        |    ");
-            WriteLine("|       |        \\  Hall  |    ");
+            WriteLine("|       |         \\  Hall  |    ");
             WriteLine("|       | Closet1 |        |    ");
             WriteLine("|       ----------|        |----|");
             WriteLine("|       |           Entry       |");
@@ -293,10 +293,10 @@ namespace HouseFirst
         {
             //bathroom also has an entry from the Left Branch of the New Hall
             WriteLine("You look into the bathroom");
-            WriteLine("|--------\\--------------\\----|     ");
+            WriteLine("|---------\\-------------\\----|     ");
             WriteLine("|                   |          |     ");
             WriteLine("|                   | Bathroom |     ");
-            WriteLine("|     Bedroom      \\          |     ");
+            WriteLine("|     Bedroom       \\         |     ");
             WriteLine("|                   |          |     ");
             WriteLine("| -----------------------------|     ");
             WriteLine("|                              |     ");
@@ -329,8 +329,8 @@ namespace HouseFirst
             WriteLine("|                    |                        |                     |");
             WriteLine("|                    |                        |                     |");
             WriteLine("|                    |                        |                     |");
-            WriteLine("|---------\\----------------------\\--------------------||---------\\");
-            WriteLine("|--------\\---------------\\----       -----------------------------|");
+            WriteLine("|----------\\----------------------\\-------------------||------------\\");
+            WriteLine("|---------\\---------------\\-----       -----------------------------|");
             WriteLine("|                     |         |      |                            |");
             WriteLine("|      Bedroom        |  Bath   |      |        Living Room         |");                 
             WriteLine("|                     |         |      |                            |");
@@ -390,8 +390,8 @@ namespace HouseFirst
             WriteLine("|     Bedroom   -----|                        |                     |");
             WriteLine("|                    |                        |                     |");
             WriteLine("|                    |                        |                     |");
-            WriteLine("|---------\\----------------------\\--------------------||---------\\");
-            WriteLine("|--------\\---------------\\----       -----------------------------|");
+            WriteLine("|----------\\---------------------\\--------------------||---------\\");
+            WriteLine("|---------\\---------------\\---       -----------------------------|");
             WriteLine("|                     |         |      |                            |");
             WriteLine("|      Bedroom        |         |      |                            |");                 
             WriteLine("|                     |         |      |                            |");
@@ -507,8 +507,8 @@ namespace HouseFirst
             WriteLine("|                    |                        \\                     |");
             WriteLine("|                    |                        |      Kitchen        |");
             WriteLine("|                    |                        |                     |");
-            WriteLine("|---------\\----------------------\\--------------------||---------\\");
-            WriteLine("|--------\\---------------\\----       -----------------------------|");
+            WriteLine("|---------\\----------------------\\-----------------------||---------\\");
+            WriteLine("|--------\\---------------\\----       -------------------------------|");
             WriteLine("|                     |         |      |                            |");
             WriteLine("|                     |         |      |        Living Room         |");                 
             WriteLine("|                     |         |      |                            |");
