@@ -19,6 +19,13 @@ class SecondFloorRooms
         WriteLine("To the left, there is a door at the end of the hall before the hall turns left. There is also a door on the left, just a few feet from the stairs.\nTo the right, the hall stretches for a few dozen feet before turning to the right. There is a door just to the right of the stairs.\nIn front of the stairs, there is an open door, looking in on a Guest Room or a Bedroom.\nPress 'Enter' to continue.");
 
         Console.ReadLine();
+
+        WriteLine("--------------\\--------------");
+        WriteLine("\\                            ");
+        WriteLine("    ---\\---     ---\\---    ");
+        WriteLine("|   |       |STR |       |   |");
+        WriteLine("|   |       |    |       |   |");
+        WriteLine("'\\' - Door\n'STR' - Stairs");
         
         WriteLine("Which way do you go?");
         WriteLine("'1' to take the Left Hall and check the Closest Door\n'2' to take the Left Hall and check the Farthest Door\n'3' to take the Left Hall but skip both doors\n'4' to take the Right Hall and check the Closest Door\n'5' to take the Right Hall but Skip the Closest Door\n'6' to go back down the Stairs\n'7' to check the Door straight ahead\n'0' to Quit the Program");
@@ -225,25 +232,80 @@ class SecondFloorRooms
     public static void porch()
     {
         //see movement in the yard
-        WriteLine("Code coming soon!");
+        WriteLine("You open the door step out onto a 2nd Floor porch. Press 'Enter' to continue.");
+        Console.ReadLine();
+        Console.Clear();
+
+        WriteLine("There are a couple of wicker chairs on the porch, along with a loveseat.\nEven in the late evening light, you still have a pretty nice view from the porch.\nYou can see the ample front yard, movement in the yard, the trees off to the side, the -\n");
+        WriteLine("Wait. You focus your gaze back on the front yard. There is someone - or someTHING - circling the house, in a slow, shuffling gait.\nIt appears to have ragged clothes on... and something about its face seems... wrong.\nIt hasn't noticed you on the Porch.\n At this point, you decide a few things: \n1. This person or thing might be one of the sources of the 'strange sights' reports\n2. Between this and some of the items that you've seen so far, there is a supernatural element to this house, one that you don't like\3. You need to wrap this up before it gets too dark outside. You have a gut feeling that you don't want to be outside the House at night.");
+        WriteLine("You head back inside. Press 'Enter' to continue.");
+        Console.ReadLine();
+        Console.Clear();
+        hallBottom();
     }
 
     public static void office()
     {
         //code; links on comp. about werewolves and Loup-Garou; description of glyphs
-        WriteLine("Code coming soon!");
+        WriteLine("You look in the door and see an Office.\nFrom the hallway door, there is another door on the wall to the left, leading to a screened-in porch.\nIn the corner, there is a bookcase.");
+        WriteLine("On the left wall of the room, there is another bookcase next to the first one.\nAgainst the wall, across from the door, are two desks: the larger desk has a computer, speakers, two monitors, and an office chair; the small desk has a printer, a ream of paper, some scattered loose papers on it, and a second office chair.");
+        WriteLine("On the right wall of the room, there is an open door, looking in on some kind of storage room or closet.\nNext to the door is a large floor lamp.\nIn the center of the room are a few stacks of books and boxes; the boxes appear to be mainly files and old magazinews.");
+        WriteLine("Press 'Enter' to continue.");
+
+        Console.ReadLine();
+        Console.Clear();
+        WriteLine("What would you like to do?");
+        WriteLine("'1' to Check the Large Desk\n'2' to Check the Small Desk\n'3' to Check the Porch\n'4' to Check the Closet\n'5' to Check the Boxes and Books\n'6' to Leave the Office");
+        var officeChoice = Int32.Parse(Console.ReadLine());
+
+        switch (officeChoice)
+        {
+            case 1:     //Large Desk
+                WriteLine("Code coming!");
+                break;
+            case 2:     //Small Desk - glyphs
+                WriteLine("You examine the top of the small desk.\nThere are over a dozen pages that have similar drawings on them:\nA triange, with each point surrounded by a different colored circle: red, dark blue, and green.\nHowever, one of the pages has a description written on it. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("'The Trisect Alignment'\n'The Trisect Alginment is a powerful glyph, used to not only contain hostile entities but to weaken them in their containment. The glyph combines the strength of the heart of the glyph creator (Red Circle) with the strengh of the Spirit (Green Circle), and adds an element of supernatural protection (Blue Circle). It is especially potent versus Lycanthropes, such as werewolves, and their more demonic cousin, the Loup-Garou. In the case of the Loup-Garou, the possessed person will ward a particular room or rooms with the Trisect Alignment and spend the night of the full moon in the room, where the Alignment weakens the Bloodlust in the Loup-Garou.");
+                WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+                WriteLine("You finish searching the Small Desk. The hairs on the back of your neck are standing up at Full Attention: what is going on in this place??");
+                WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                office();
+                break;
+            case 3:     //Porch
+                porch();
+                break;
+            case 4:     //Closet
+                WriteLine("You walk over to the door to the Closet and look in. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                upstairsCloset();
+                break;
+            case 5:     //Boxes
+                WriteLine("Code coming!");
+                break;
+            case 6:     //Leave
+                WriteLine("You leave the Office and go back into the hallway.\n");
+                hallLeft();
+                break;        
+            default:
+                WriteLine("You have exited the Program.");
+                System.Environment.Exit(0);
+                break;
+        }
+
     }
 
     public static void upstairsCloset()
     {
         //info on Billy Adams; resurrected?
         WriteLine("You open the door and see a very large closet, almost a storage room. It is large enough enough for multiple people to be in at once, but not quite large enough for multiple pieces of furniture.\nYou notice boxes and crates everywhere. On top of a stack of furniture, you notice an odd pamphlet:\n'Resurrection and What To Beware Of'\n");
-    }
-
-    public static void mystery()
-    {
-        //portal room - unlocked via candleholder
-        WriteLine("Code coming soon!");
+        WriteLine("More code later!");
     }
 
     public static void bathroom2()
@@ -261,7 +323,7 @@ class SecondFloorRooms
     public static void behindTheWalls()
     {
         //code on wall; wires; info about Orb, Locket
-        WriteLine("You open the door and enter a narrow, U-shaped room.\nThis looks like a space where wires and cables that go between the floors of the house can run, without being seen.\nPress 'Enter' to continue.");
+        WriteLine("You enter a narrow, U-shaped room.\nThis looks like a space where wires and cables that go between the floors of the house can run, without being seen.\nPress 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
 
@@ -290,7 +352,8 @@ class SecondFloorRooms
                 break;
             case 3:
                 //shelves - nothing
-                WriteLine("Code is coming!");
+                WriteLine("You check the shelves of the room. There are some randome hardware - wires, loose bolts, etc. - and some other odds and ends, but you see nothing else of note.")
+                behindTheWalls();
                 break;
             case 4:
                 //work benches - code on paper, drawings?
@@ -298,7 +361,10 @@ class SecondFloorRooms
                 break;
             case 5:
                 //notice glyphs on wall
-                WriteLine("Code is coming!");
+                WriteLine("As you walk around the room, you notice that there are drawings on the walls, specifically near the doors and back by the thick wires running into the walls. You may have seen them in other parts of the house: A triangle, with red, green, and blue circles drawn around the points of the triangle.\nThese drawings are also scratched into the floor, although the circles are all black; maybe they are unfinished?\nYou leave the room and go back to the stairs; it's a central, safe area to plan your next move. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                stairs();
                 break;
             case 6:
                 //leave
