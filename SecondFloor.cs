@@ -24,7 +24,7 @@ class SecondFloorRooms
         WriteLine("    ---\\---     ---\\---    ");
         WriteLine("|   |       |STR |       |   |");
         WriteLine("|   |       |    |       |   |");
-        WriteLine("'\\' - Door\n'STR' - Stairs");
+        WriteLine("'\' - Door\n'STR' - Stairs");
         
         WriteLine("Which way do you go?");
         WriteLine("'1' to take the Left Hall and check the Closest Door\n'2' to take the Left Hall and check the Farthest Door\n'3' to take the Left Hall but skip both doors\n'4' to take the Right Hall and check the Closest Door\n'5' to take the Right Hall but Skip the Closest Door\n'6' to go back down the Stairs\n'7' to check the Door straight ahead\n'0' to Quit the Program");
@@ -135,9 +135,6 @@ class SecondFloorRooms
                 System.Environment.Exit(0);
                 break;
         }
-
-
-
     }
 
     public static void masterBedroom2()
@@ -286,7 +283,11 @@ class SecondFloorRooms
                 upstairsCloset();
                 break;
             case 5:     //Boxes
-                WriteLine("Code coming!");
+                WriteLine("You examine the boxes and books.\nOn top of one of the stacks of books is a leather-bound book, with 'The Changing' written on the front. Ominous!\n You walk over, shut the Office door - just in case - and sit at the smaller desk. You open the book and flip through the pages. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                
+                Encounters.diary();        //under "Encounters"
                 break;
             case 6:     //Leave
                 WriteLine("You leave the Office and go back into the hallway.\n");

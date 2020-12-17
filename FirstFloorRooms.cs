@@ -423,7 +423,7 @@ namespace HouseFirst
                     Console.Clear();
 
                     WriteLine("You take a closer look at the box - it's a box of 20 bullets. Opening the box, you see that these are SILVER BULLETS.\n");
-                    bool silverBullets = true;      // used in Final Battle
+                    var silverBullets = 20;      // used in Final Battle
                     WriteLine("You take the box, although you're now wondering why someone would need a specific type of bullet, much less 20 of them. Nothing else of interest is in the closet, so you return your attention to the Master Bedroom.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
