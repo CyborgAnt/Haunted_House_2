@@ -13,7 +13,19 @@ namespace HouseFirst
             WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more of a generic color, and not nearly as thick.");
             WriteLine("Press 'Enter to continue.");
             Console.ReadLine();
-
+            Console.Clear();
+            
+            WriteLine("|                                               |");
+            WriteLine("|                       ------------------------|");
+            WriteLine("|                    |  |                       |");
+            WriteLine("|                    |  |                       |");
+            WriteLine("|--------------------|  |                       |");
+            WriteLine("|                  --|  |---                    |");
+            WriteLine("|                  |       |                    |");
+            WriteLine("|                 \\ Entry \\                   |");
+            WriteLine("|------------------|--\\---|--------------------|");
+            
+                        
             WriteLine("You have a few choices to make. What would you like to do?");
             WriteLine("Enter '1' to check the Left Door\nEnter '2' to check the Right Door\nEnter '3' to choose the Hall\nEnter '0' to end the program");
             var choiceEntry = Int32.Parse(ReadLine());
@@ -50,6 +62,15 @@ namespace HouseFirst
             WriteLine("There is no other door leading into, or out of, the room, other than the one you're standing at. Press 'Enter' to Continue.");
             Console.ReadLine();
 
+            WriteLine("|                                               |");
+            WriteLine("|                                               |");
+            WriteLine("|--------------------------                     |");
+            WriteLine("|   Bookcases              |                    |");
+            WriteLine("|                          |                    |");
+            WriteLine("|          STUDY           |--|  |--|           |");
+            WriteLine("|                         \\  Entry \\           |");
+            WriteLine("|          window          |        |           |");
+            WriteLine("|-----------------------------------------------|");
             WriteLine("What would you like to do?");
             WriteLine("Enter '1' to check the Bookcases\nEnter '2' to check one of the tables\nEnter '3' to return to the Entry\nAnything else to Quit the program");
             var studyChoice = Int32.Parse(Console.ReadLine());
@@ -87,6 +108,16 @@ namespace HouseFirst
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
+            WriteLine("|                                               |");
+            WriteLine("|                ------------------------------ |");
+            WriteLine("|              |  | Stairs |                     |");
+            WriteLine("|             |  | --------               Window|");
+            WriteLine("|             |  |       Living                 |");
+            WriteLine("|-------------|  |        Room                  |");
+            WriteLine("|             |  |---                           |");
+            WriteLine("|           |       |                     Window|");
+            WriteLine("|          \\ Entry \\                          |");
+            WriteLine("|-----------|--\\---|---------------------------|");
             WriteLine("There are a few options - what would you like to do?");
 
             WriteLine("Enter '1' to examine the Mantle\nEnter '2' to look out the Closest Window\nEnter '3' to look out the Far Window\nEnter '4' to check the Couch\nEnter '5' to check the Loveseat\nEnter '6' to Leave the Living Room\nEnter '7' to check out the Stairs\n Enter '0' to Quit the program");
@@ -157,9 +188,20 @@ namespace HouseFirst
         {
             Console.WriteLine("You enter a Bedroom.");
             Console.WriteLine("It's a large, nice bedroom, not suffering from the ramsacked appearance of most of the rest of the house.\n You see most of your 'typical' bedroom furniture: a large bed, a couple of night stands, a dresser, and a cabinet that has a lot of knick-knacks.\n");
-            Console.WriteLine("There is a closet in a corner, and a door that opens onto a bathroom across from the closet.\nPress 'Enter' to continue.");
+            Console.WriteLine("There is a closet in the far left corner, and a door that opens onto a bathroom across from the closet.\nPress 'Enter' to continue.");
             
             Console.ReadLine();
+            WriteLine("|--------\\--------------\\----|     ");
+            WriteLine("|                   |          |     ");
+            WriteLine("|                   | Bathroom |     ");
+            WriteLine("|     Bedroom      \\          |     ");
+            WriteLine("|                   |          |     ");
+            WriteLine("| -----------------------------|     ");
+            WriteLine("|                              |     ");
+            WriteLine("|                              |     ");
+            WriteLine("|            STUDY             |     ");
+            WriteLine("|------------------------------      ");
+            
             WriteLine("What would you like to do next?");
 
             /* switch-cases:
@@ -184,12 +226,14 @@ namespace HouseFirst
                     break;
                 case 3:
                     //Cabinet - ?
-
+                    WriteLine("Other than the knick-knacks, the only thing you find of interest is a piece of paper, with the number '7521' written on it.\nYou decide to check the bathroom before leaving.");
+                    bathroom();
                     break;
 
                 case 4:
                     WriteLine("You leave the bedroom. Press 'Enter' to continue.");
-                    Console.ReadLine();            
+                    Console.ReadLine();
+                    Backhouse.tHall();        // check this branch            
                     break;
                 default:
                     WriteLine("You have exited the program.");
@@ -207,6 +251,19 @@ namespace HouseFirst
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
+            WriteLine("|       -------------\\---------");
+            WriteLine("|                               ");
+            WriteLine("|       -----------        -----");
+            WriteLine("|       | Util.  \\        |    ");
+            WriteLine("|       -----------        |    ");
+            WriteLine("|       |        \\        |    ");
+            WriteLine("|       | Closet2 |        |    ");
+            WriteLine("|       -----------        |    ");
+            WriteLine("|       |        \\  Hall  |    ");
+            WriteLine("|       | Closet1 |        |    ");
+            WriteLine("|       ----------|        |----|");
+            WriteLine("|       |           Entry       |");
+            
             WriteLine("What would you like to do?");
             WriteLine("Enter '0' to Quit the program\nEnter '1' to check the nearest Door\nEnter '2' to check the Middle Door\nEnter '3' to check the Far Door\nEnter '4' to continue to the End of the Hall");            
             
@@ -236,11 +293,22 @@ namespace HouseFirst
         {
             //bathroom also has an entry from the Left Branch of the New Hall
             WriteLine("You look into the bathroom");
+            WriteLine("|--------\\--------------\\----|     ");
+            WriteLine("|                   |          |     ");
+            WriteLine("|                   | Bathroom |     ");
+            WriteLine("|     Bedroom      \\          |     ");
+            WriteLine("|                   |          |     ");
+            WriteLine("| -----------------------------|     ");
+            WriteLine("|                              |     ");
+            WriteLine("|                              |     ");
+            WriteLine("|            STUDY             |     ");
+            WriteLine("|------------------------------      ");
             WriteLine("The bathroom is not overly large, but there's a large amount of damage that's been done to it. There is a large shower and bathtub, but the tub has been cracked. There is a sink and a medicine cabinet above it, but the sink has been ripped away from the wall, partially laying in/on the bath tub. Press 'Enter' to continue.");
             Console.ReadLine();
-            WriteLine("As you continue to look around, you notice a few drops of blood on the floor, on the sink remnants, and on the walls. You don't see anything else of note.");
-            // add branch to go back to New Hall or Bedroom
-
+            WriteLine("As you continue to look around, you notice a few drops of blood on the floor, on the sink remnants, and on the walls. You don't see anything else of note. You go to the Bedroom. Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+            bedroom();
         }
         
     }
@@ -251,9 +319,21 @@ namespace HouseFirst
         {
             WriteLine("You continue down the main hall until you reach the T-intersection. Press 'Enter' to continue.");
             Console.ReadLine();
-            WriteLine("There are 3 main choices that you see:\n1. Straight ahead, there is a closed door.\n2. To your left, the hall continues a short distance until ending at a wall. On the left side of that hall branch, there are two doors: one opens onto what looks like a Bathroom, the other door was closed.\nOn the right side of that hall branch is another door, across from the closed door on the left.\n3. To your right, the hall ends at a door to the outside. On the right side, there is an opening that leads to what looks like a Kitchen.");
+            Console.Clear();
+            WriteLine("There are 3 main choices that you see:\n1. Straight ahead, there is a closed door.\n2. To your left, the hall continues a short distance until ending at a wall. On the left side of that hall branch, there are two doors: one opens onto what looks like a Bathroom, the other door was closed.\nOn the right side of that hall branch is another door, across from the closed door on the left.\n3. To your right, the hall ends at a door to the outside. On the left side, there is an opening that leads to what looks like a Kitchen.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
+            WriteLine("|-------------------------------------------------------------------|");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|---------\\----------------------\\--------------------||---------\\");
+            WriteLine("|--------\\---------------\\----       -----------------------------|");
+            WriteLine("|                     |         |      |                            |");
+            WriteLine("|      Bedroom        |  Bath   |      |        Living Room         |");                 
+            WriteLine("|                     |         |      |                            |");
 
             WriteLine("What do you do?");
             WriteLine("Enter '1' to take the Left Hall and check the Right Door\nEnter '2' to take the Left Hall and check the Left Door\nEnter '3' to take the Left Hall and check the Bathroom\nEnter '4' to Check the Door Ahead\nEnter '5' to take the Right Hall and check the Left Door\nEnter '6' to Check the door to the Outside\nEnter '7' to go back to the Entry");
@@ -304,6 +384,17 @@ namespace HouseFirst
         public static void masterBedroom()
         {
             Console.Clear();
+            WriteLine("|-------------------------------------------------------------------|");
+            WriteLine("|               |    |                        |                     |");
+            WriteLine("|     Master    |    |                        |                     |");
+            WriteLine("|     Bedroom   -----|                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|---------\\----------------------\\--------------------||---------\\");
+            WriteLine("|--------\\---------------\\----       -----------------------------|");
+            WriteLine("|                     |         |      |                            |");
+            WriteLine("|      Bedroom        |         |      |                            |");                 
+            WriteLine("|                     |         |      |                            |");
             WriteLine("You enter the Master Bedroom.\nThis bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; it's doors are closed. There is a faint odor coming from the wardrobe's direction.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
@@ -377,6 +468,17 @@ namespace HouseFirst
         public static void diningRoom()
         {
             Console.Clear();
+            WriteLine("|-------------------------------------------------------------------|");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |      Dining Room       |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|---------\\----------------------\\--------------------||---------\\");
+            WriteLine("|--------\\---------------\\----       -----------------------------|");
+            WriteLine("|                     |         |      |                            |");
+            WriteLine("|                     |         |      |        Living Room         |");                 
+            WriteLine("|                     |         |      |                            |");
             WriteLine("You open the door ahead and peer in.\n\nIt is a Dining Room.\nIt is a very nice Dining Room, too! The main feature is the cherry room table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside, right now, is the light from the full moon.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
@@ -399,10 +501,20 @@ namespace HouseFirst
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
+            WriteLine("|-------------------------------------------------------------------|");
+            WriteLine("|                    |                        |               Stairs|");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|                    |                        \\                     |");
+            WriteLine("|                    |                        |      Kitchen        |");
+            WriteLine("|                    |                        |                     |");
+            WriteLine("|---------\\----------------------\\--------------------||---------\\");
+            WriteLine("|--------\\---------------\\----       -----------------------------|");
+            WriteLine("|                     |         |      |                            |");
+            WriteLine("|                     |         |      |        Living Room         |");                 
+            WriteLine("|                     |         |      |                            |");
             WriteLine("As the lights come on, two things immediately strike you: this room gives off a 'bad' vibe, and that vibe is coming from the stairs.");
             WriteLine("Press 'Enter' to continue.");
-            Console.ReadLine();
-            Console.Clear();
+            Console.ReadLine(); 
 
             WriteLine("The stairs are set into the wall to your right, in the far corner, leading down into darkness. Red streaks run between the entrance door and the stairs; you are certain that they are blood stains.\nThe rest of the Kitchen isn't much better.\nOn the left wall, there is - WAS - a door, leading to the Dining Room; that door is now laying on the floor, shattered by some extreme force.\nThere is a kitchen island in the center of the room, with 4 high-backed stools set on the end closest to you.\nCabinets are mounted on 3 of the walls - only the wall to your left is void of them.");
             WriteLine("Press 'Enter' to continue.");

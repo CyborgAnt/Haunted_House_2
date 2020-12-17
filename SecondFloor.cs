@@ -7,8 +7,7 @@ using static System.Console;
 
 class SecondFloorRooms
 {
-    var orb = 0;
-
+    
     public static void stairs()
     {
         //hub for the 2nd Floor
@@ -144,7 +143,7 @@ class SecondFloorRooms
     public static void masterBedroom2()
     {
         //bullets; secret door to Basement
-        WriteLine("You enter the room from the Hall; you have to turn on your flashlight, first. \You locate the light switch, flick it up, and the room is illuminated. Press 'Enter' to continue.");
+        WriteLine("You enter the room from the Hall; you have to turn on your flashlight, first. \nYou locate the light switch, flick it up, and the room is illuminated. Press 'Enter' to continue.");
 
         Console.ReadLine();
         Console.Clear();
@@ -161,7 +160,7 @@ class SecondFloorRooms
         {
             case 1:     //closet
                 WriteLine("You walk over to the Closet and look in.\nOther than standard clothes, you don't notice anything of importance. However, on the top shelf, you see a box of bullets.\nOpening the box, you see 20 SILVER BULLETS. You close the box, pocket it, and look around the room once more. Press 'Enter' to continue.");
-                silverBullets += 20;
+                //silverBullets += 20;
                 Console.ReadLine();
                 Console.Clear();
                 masterBedroom2();
@@ -182,16 +181,16 @@ class SecondFloorRooms
                 WriteLine("This may be what some writings you came across earlier were referring to: 'Twin Orbs'. If you haven't found it already, you might want to find the second Orb - it seems like it might be important.");
                 WriteLine("You decide on your next move, as you head back to the door. Press 'Enter' to continue.");
 
-                orb += 1;
+                //orb += 1;
                 Console.ReadLine();
                 Console.Clear();
                 masterBedroom2();
                 break;    
             case 4:     //Object - Switch
-                WriteLine("You walk over to the object in the wall.\n\nIt is small, silver-colored, shaped like a dagger hilt, although the blade is missing.\nYou reach to grab it; as you grab it, the object slides into the wall!\nA section o0f the wall, between the Bathroom door and the corner, slides open, revealing a set of stairs that lead down. Do you descend the stairs? Enter '1' for Yes, anything else for 'No'": );
-                var stairsDown = Console.ReadLine();
+                WriteLine("You walk over to the object in the wall.\n\nIt is small, silver-colored, shaped like a dagger hilt, although the blade is missing.\nYou reach to grab it; as you grab it, the object slides into the wall!\nA section o0f the wall, between the Bathroom door and the corner, slides open, revealing a set of stairs that lead down. Do you descend the stairs? Enter '1' for Yes, anything else for 'No'");
+                var down = Int32.Parse(Console.ReadLine());
 
-                if(stairsDown == '1')
+                if(down == 1)
                 {
                     WriteLine("Code To Come!");
                     // basement: wall near Gate
@@ -237,11 +236,11 @@ class SecondFloorRooms
         Console.Clear();
 
         WriteLine("There are a couple of wicker chairs on the porch, along with a loveseat.\nEven in the late evening light, you still have a pretty nice view from the porch.\nYou can see the ample front yard, movement in the yard, the trees off to the side, the -\n");
-        WriteLine("Wait. You focus your gaze back on the front yard. There is someone - or someTHING - circling the house, in a slow, shuffling gait.\nIt appears to have ragged clothes on... and something about its face seems... wrong.\nIt hasn't noticed you on the Porch.\n At this point, you decide a few things: \n1. This person or thing might be one of the sources of the 'strange sights' reports\n2. Between this and some of the items that you've seen so far, there is a supernatural element to this house, one that you don't like\3. You need to wrap this up before it gets too dark outside. You have a gut feeling that you don't want to be outside the House at night.");
+        WriteLine("Wait. You focus your gaze back on the front yard. There is someone - or someTHING - circling the house, in a slow, shuffling gait.\nIt appears to have ragged clothes on... and something about its face seems... wrong.\nIt hasn't noticed you on the Porch.\n At this point, you decide a few things: \n1. This person or thing might be one of the sources of the 'strange sights' reports\n2. Between this and some of the items that you've seen so far, there is a supernatural element to this house, one that you don't like\n3. You need to wrap this up before it gets too dark outside. You have a gut feeling that you don't want to be outside the House at night.");
         WriteLine("You head back inside. Press 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
-        hallBottom();
+        SecondFloorHalls.hallBottom();
     }
 
     public static void office()
@@ -291,7 +290,7 @@ class SecondFloorRooms
                 break;
             case 6:     //Leave
                 WriteLine("You leave the Office and go back into the hallway.\n");
-                hallLeft();
+                SecondFloorHalls.hallLeft();
                 break;        
             default:
                 WriteLine("You have exited the Program.");
@@ -352,7 +351,7 @@ class SecondFloorRooms
                 break;
             case 3:
                 //shelves - nothing
-                WriteLine("You check the shelves of the room. There are some randome hardware - wires, loose bolts, etc. - and some other odds and ends, but you see nothing else of note.")
+                WriteLine("You check the shelves of the room. There are some randome hardware - wires, loose bolts, etc. - and some other odds and ends, but you see nothing else of note.");
                 behindTheWalls();
                 break;
             case 4:
