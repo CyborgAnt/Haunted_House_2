@@ -9,7 +9,7 @@ namespace HouseFirst
         public static void entryway()
         {
             
-            WriteLine("The entryway is a small, square room. \nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself was fairly dark; sunlight, coming in from windows in the front door, was the only source of light in the entry.");
+            WriteLine("You enter in a small entryway, a square, nearly empty room. \nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself was fairly dark; evening sunlight, coming in from windows in the front door, is the only source of light in the entry.");
             WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more of a generic color, and not nearly as thick.");
             WriteLine("Press 'Enter to continue.");
             Console.ReadLine();
@@ -23,7 +23,7 @@ namespace HouseFirst
             WriteLine("|                  --|  |---                    |");
             WriteLine("|                  |      |                     |");
             WriteLine("|                 \\ Entry \\                     |");
-            WriteLine("|------------------|--\\---|----------------------3|");
+            WriteLine("|------------------|--\\---|-----------------------|");
             
                         
             WriteLine("You have a few choices to make. What would you like to do?");
@@ -58,7 +58,7 @@ namespace HouseFirst
             WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
             Console.ReadLine();
             Console.Clear();
-            WriteLine("It is a well-lit, well-furnished one. There is a very large window on the wall to your left. \nA long bench is in front of the window. Multiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. \nOn the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
+            WriteLine("It is a well-lit, well-furnished room.\nThere is a very large window on the wall to your left. A long bench is in front of the window.\nMultiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. \nOn the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
             WriteLine("There is no other door leading into, or out of, the room, other than the one you're standing at. Press 'Enter' to Continue.");
             Console.ReadLine();
 
@@ -102,8 +102,8 @@ namespace HouseFirst
             // right door
             Console.Clear();
             WriteLine("You open the door and enter the Living Room.");
-            WriteLine("There are two, normal-sized windows on the wall across from the door, with some odds and ends on the floor\nThere is a set of stairs that lead up, placed in the left corner of the room.");
-            WriteLine("The room itself is in a state of disrepair.\n You see a large gray couch, laying on it's side, in the center of the room. A loveseat is also laying on its side, next to the couch. \nThere is a Mantle piece against the far left wall.\nIn front of the Mantle are the remains of what appears to be a coffee table - it looks like it was thrown against the Mantle. There is a large hole in the right wall but no indication of what made that hole.");
+            WriteLine("There are two, normal-sized windows on the wall across from the door, with some odds and ends on the floor.\nThere is a set of stairs that lead up, in the left corner of the room.");
+            WriteLine("The room itself is in a state of slight disrepair.\n You see a large gray couch, laying on it's side, in the center of the room. A loveseat is also laying on its side, next to the couch. \nThere is a Mantle piece against the far left wall.\nIn front of the Mantle are the remains of what appears to be a coffee table - it looks like it was thrown against the Mantle. There is a large hole in the right wall but no indication of what made that hole.");
             
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
@@ -118,7 +118,7 @@ namespace HouseFirst
             WriteLine("|           |       |                     Window|");
             WriteLine("|          \\ Entry \\                          |");
             WriteLine("|-----------|--\\---|---------------------------|");
-            WriteLine("There are a few options - what would you like to do?");
+            WriteLine("What would you like to do, next?");
 
             WriteLine("Enter '1' to examine the Mantle\nEnter '2' to look out the Closest Window\nEnter '3' to look out the Far Window\nEnter '4' to check the Couch\nEnter '5' to check the Loveseat\nEnter '6' to Leave the Living Room\nEnter '7' to check out the Stairs\n Enter '0' to Quit the program");
             var livingRoomChoice = Int32.Parse(Console.ReadLine());
@@ -145,7 +145,7 @@ namespace HouseFirst
                     // Window - near
                     Console.Clear();
                     WriteLine("You head over to the nearest window and take a look out.");
-                    WriteLine("It's dusk, not quite total darkness. There is a line of trees a few dozen feet away. You look deep - something moved in the trees! Press 'Enter' to continue.");
+                    WriteLine("It's dusk, not quite total darkness. There is a line of trees a few dozen feet away.\nYou look deep - something moved in the trees! Press 'Enter' to continue.");
 
                     Console.ReadLine();
                     // Console.Clear();
@@ -204,11 +204,6 @@ namespace HouseFirst
             
             WriteLine("What would you like to do next?");
 
-            /* switch-cases:
-                bathroom - vision?
-                closet, cabinet - nothing
-                leave - back to Left Hall
-                */
             WriteLine("Enter '1' to check the Bathroom\nEnter '2' to check the Closet\nEnter '3' to check the Cabinet\nEnter '4' to Leave the bedroom\nEnter Anythng else to Quit the program.");
             Console.ReadLine();
 
@@ -303,7 +298,7 @@ namespace HouseFirst
             WriteLine("|                              |     ");
             WriteLine("|            STUDY             |     ");
             WriteLine("|------------------------------      ");
-            WriteLine("The bathroom is not overly large, but there's a large amount of damage that's been done to it. There is a large shower and bathtub, but the tub has been cracked. There is a sink and a medicine cabinet above it, but the sink has been ripped away from the wall, partially laying in/on the bath tub. Press 'Enter' to continue.");
+            WriteLine("The bathroom is not overly large, but there's a large amount of damage that's been done to it.\nThere is a large shower and bathtub, but the tub has been cracked.\nThere is a sink and a medicine cabinet above it, but the sink has been ripped away from the wall, partially laying in/on the bath tub. Press 'Enter' to continue.");
             Console.ReadLine();
             WriteLine("As you continue to look around, you notice a few drops of blood on the floor, on the sink remnants, and on the walls. You don't see anything else of note. You go to the Bedroom. Press 'Enter' to continue.");
             Console.ReadLine();
@@ -336,7 +331,7 @@ namespace HouseFirst
             WriteLine("|                     |         |      |                            |");
 
             WriteLine("What do you do?");
-            WriteLine("Enter '1' to take the Left Hall and check the Right Door\nEnter '2' to take the Left Hall and check the Left Door\nEnter '3' to take the Left Hall and check the Bathroom\nEnter '4' to Check the Door Ahead\nEnter '5' to take the Right Hall and check the Left Door\nEnter '6' to Check the door to the Outside\nEnter '7' to go back to the Entry");
+            WriteLine("1. Take the Left Hall and check the Right Door\n2. Take the Left Hall and check the Left Door\n3. Take the Left Hall and check the Bathroom\n4. Check the Door Ahead\n5. Take the Right Hall and check the Left Door\n6. Check the door to the Outside\n7. Go back to the Entry");
 
             var tHallChoice = Int32.Parse(Console.ReadLine());
 
@@ -395,7 +390,7 @@ namespace HouseFirst
             WriteLine("|                     |         |      |                            |");
             WriteLine("|      Bedroom        |         |      |                            |");                 
             WriteLine("|                     |         |      |                            |");
-            WriteLine("You enter the Master Bedroom.\nThis bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; it's doors are closed. There is a faint odor coming from the wardrobe's direction.");
+            WriteLine("You enter the Master Bedroom. This bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; it's doors are closed. There is a faint odor coming from the wardrobe's direction.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
@@ -451,7 +446,7 @@ namespace HouseFirst
 
                     WriteLine("The body is of a man, over 6 feet tall, with salt-and-pepper hair, a thin build, and a not-quite-middle-aged face.\nHis shirt appears to have been shredded, along with the torso underneath!\n");
                     WriteLine("You inspect the body. You find a piece of paper inside the front right pocket. On it, in a small, hurried-looking print is this:\n\n'She dabbled too deep! She is now a Lou-");
-                    WriteLine("The note is torn off at that point.\nYou don't know what a 'Lou' is but whatever it is, it was stron enough to kill a man and stuff him in a wardrobe.\n\nYou take the Note and pocket it, then put the body back into the Wardrobe - gruesome work.");
+                    WriteLine("The note is torn off at that point.\nYou don't know what a 'Lou' is but whatever it is, it was strong enough to kill a man and maybe stuff him in a wardrobe...?\n\nYou take the Note and pocket it, then put the body back into the Wardrobe - gruesome work.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
@@ -479,7 +474,7 @@ namespace HouseFirst
             WriteLine("|                     |         |      |                            |");
             WriteLine("|                     |         |      |        Living Room         |");                 
             WriteLine("|                     |         |      |                            |");
-            WriteLine("You open the door ahead and peer in.\n\nIt is a Dining Room.\nIt is a very nice Dining Room, too! The main feature is the cherry room table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside, right now, is the light from the full moon.");
+            WriteLine("You open the door ahead and peer in.\n\nIt is a Dining Room, a very nice Dining Room, too! The main feature is the cherry room table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside, right now, is the light from a full moon.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
@@ -538,7 +533,7 @@ namespace HouseFirst
                     Console.ReadLine();
                     Console.Clear();
 
-                    WriteLine("The other sheet of paper is a clipping of a newspaper article from 3 days ago. It is one of those articles that yoy find in the 'Communities' section; this one deals with some of the superstitions about the Full Moon.\nAn interesting article, you pocket the article and drawings and continue in the Kitchen.");
+                    WriteLine("The other sheet of paper is a clipping of a newspaper article from 3 days ago. It is one of those articles that you find in the 'Communities' section; this one deals with some of the superstitions about the Full Moon.\nAn interesting article, you pocket the article and drawings and continue in the Kitchen.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
@@ -546,7 +541,7 @@ namespace HouseFirst
                     break;
                 case 2:
                     //Stove; code
-                    WriteLine("You inspect the stove closer.\nThe writing on the stove is a set of numbers:\n'7520'.\nPress 'Enter' to continue with the Kitchen Search.");
+                    WriteLine("You inspect the stove closer.\nThe writing on the stove is a set of numbers:\n'7521'.\nPress 'Enter' to continue with the Kitchen Search.");
                     Console.ReadLine();
                     kitchen();
                     break;

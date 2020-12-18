@@ -83,7 +83,7 @@ class Encounters
                 WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
 
-                WriteLine("Dazed, you hurry to your feet. Standing near you is... something not human. For starters, it's arms are entirely too long and end in a set of claws. The body is compact but still well over 5 feet tall, with tattered remains of clothes clovering it.\nThe head is humanoid but the mouth is full of sharp, canine-like teeth. It's eyes are cunning lacking remorse.");
+                WriteLine("Dazed, you hurry to your feet. Standing near you is... something not human.\nFor starters, its arms are entirely too long and end in a set of claws.\nThe body is compact but still well over 5 feet tall, with tattered remains of clothes clovering it.\nThe head is humanoid but the mouth is full of sharp, canine-like teeth. It's eyes are cunning, lacking remorse.");
                 WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
                 WriteLine("What yanked you out of the window is something you've only seen in movies: a Ghoul!\n");
@@ -130,14 +130,11 @@ class Encounters
         Console.ReadLine();
 
         WriteLine("You sidestep the Ghoul and make it to window.");
-        WriteLine("Press 'Enter' to continue.");
-        Console.ReadLine();
-
         WriteLine("Unfortunately, you do not make it THROUGH the window.");
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
 
-        WriteLine("The Ghoul reaches out for you again. However, the claws don't grab your shoulders:\nThey go through your back and out through your chest.");
+        WriteLine("The Ghoul reaches out for you again.\nHowever, the claws don't grab your shoulders: they go through your back and out through your chest.");
         WriteLine("There is a sharp pain... then a numbness. You are left wondering why there is a Ghoul in the yard, in the first place, as your consciousness fades to black....");
         System.Environment.Exit(0);  
     }
@@ -149,7 +146,7 @@ class Encounters
         Console.ReadLine();
         Console.Clear();
 
-        WriteLine("You run around the side of the house, towards the front porch. You hear the Ghoul shuffling after you but you can't tell how close it is.");
+        WriteLine("You run around the side of the house, towards the front porch.\nYou hear the Ghoul shuffling after you but you can't tell how close it is.");
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
@@ -166,7 +163,7 @@ class Encounters
                 WriteLine("You sprint towards the front porch.\nYou stop in the Entry, trying to slow your rapidly beating heart and fast breathing.");
                 WriteLine("Press 'Enter' to continue.");
 
-                WriteLine("You poke your head back out the door... and do not see the Ghoul in sight.\nYou close the door, hesitate, then go back to searching the house.");
+                WriteLine("You poke your head back out the door... and do not see the Ghoul at all.\nYou close the door, hesitate, then go back to searching the house.");
                 WriteLine("You return to the Living Room. Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
@@ -177,7 +174,7 @@ class Encounters
                 WriteLine("You decide to make a run for you car.\nYou sprint towards the driver's side door, yank it open, and dive inside. You sit up, start the car, and look out the windshield.\nThe Ghoul is shambling towards the car, although it's not terribly choice.\n\nWhat do you do? Press 'Enter to Continue.");
 
                 Console.ReadLine();
-                WriteLine("'1' to Drive Away'\'2' to Attempt to Run Over the Ghoul\n");
+                WriteLine("'1' to Drive Away'\n'2' to Attempt to Run Over the Ghoul\n");
 
                 var carChoice = Int32.Parse(Console.ReadLine());
                 switch (carChoice)
@@ -212,11 +209,6 @@ class Encounters
                         WriteLine("You have exited the program.");
                         break;
                 }
-
-
-
-
-
                 break;
             case 3:
                 //keep running - ghoul stops
@@ -225,7 +217,7 @@ class Encounters
                 Console.ReadLine();
                 Console.Clear();
 
-                WriteLine("You run across the street and head towards an open cafe.\nYou enter, slightly startling a waitress. You compose yourself - while glancing outside for pursuit- and taker a seat.\n\nYou do not see any sign of the Ghoul but that only slightly eases your fears.");
+                WriteLine("You run across and down the street, towards an open cafe.\nYou enter, slightly startling a waitress. You compose yourself - while glancing outside for pursuit- and taker a seat.\n\nYou do not see any sign of the Ghoul but that only slightly eases your fears.");
                 WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
@@ -253,7 +245,7 @@ class Encounters
         var ghoulArmor = 12;
         var playerHealth = 40;
         var ghoulHealth = 30;
-        // add code for when the player runs out of bullets
+        // add code for when the player runs out of bullets?
         
          while((ghoulHealth> 0) || (playerHealth > 0))
         { 
@@ -310,11 +302,11 @@ class Encounters
 
     public static void playerDead()
     {
-        WriteLine("You fall to the ground after the Ghoul's latest claw swipe.");
+        WriteLine("You fall to the ground after the Ghoul's latest claw attack.");
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
         
-        WriteLine("You have been cut and slashed in many places, some of the slashes really deep.\nYou try to crawl away but the Ghoul stops you. It licks you up by the back of your shirt and tosses you into the tree line.\nYou black out as you impact a particularly large tree.\n You don't see or feel it - thankfully - when the Ghoul reaches you body and chomps down on your torso.");
+        WriteLine("You have been cut and slashed in many places, some of the slashes really deep.\nYou try to crawl away but the Ghoul stops you. It picks you up by the back of your shirt and tosses you into the tree line.\nYou black out as you impact a particularly large tree.\n You don't see or feel it - thankfully - when the Ghoul reaches you body and chomps down on your torso.");
         System.Environment.Exit(0); 
     }
 
