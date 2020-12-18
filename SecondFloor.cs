@@ -288,6 +288,9 @@ class SecondFloorRooms
                 Console.Clear();
                 
                 Encounters.diary();        //under "Encounters"
+                WriteLine("You are absolutely terrified: you will probably have to fight - and kill - Ros Adams to close this because you have no douby that she is the ultimate cause of all of the reports surrounding this House.");
+                WriteLine("You leave Office and go back into the Hall, resolving to finish this search of the 2nd Floor quickly. You have a date with The Gate and Ros Adams.");
+                SecondFloorHalls.hallLeft();
                 break;
             case 6:     //Leave
                 WriteLine("You leave the Office and go back into the hallway.\n");
@@ -391,7 +394,35 @@ class SecondFloorHalls
     public static void hallLeft()
     {
         //Hallway to the left of the floor
-        WriteLine("Code is coming!");
+        Console.Clear();
+        WriteLine("You turn down the hall to the left.\nAbout 3/4 down the hall, you see 2 doors on the right.\One door looks like it leads to a large room; the other door is near the corner, where the hall turns again to the left.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+        
+        WriteLine("-----------------");
+        WriteLine("\\               ");
+        WriteLine(" Here --------");
+        WriteLine("|    |       | |");
+        WriteLine("|    |       | |");
+        WriteLine("|    |       | |");
+        WriteLine("\\   |       | |");
+        WriteLine("|    |       | |");
+        WriteLine("|    |       | |");
+        WriteLine("\\   |       | |");
+        WriteLine("|    --------- |");
+        WriteLine("|--------------|");
+        WriteLine("\nWhat would you like to do?");
+
+        WriteLine("1. Enter the closest door\n2. Enter the farthest door\n3. Go around the corner, skipping the doors\4. Go back to the Stairs");
+        var hallChoiceLeft = Int32.Parse(Console.ReadLine());
+
+        switch (hallChoiceLeft)
+        {
+            
+            
+            default:
+        }  
+
     }
     public static void hallRight()
     {

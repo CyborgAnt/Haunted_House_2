@@ -341,4 +341,55 @@ class Encounters
     {
         WriteLine("Code to come!");
     }
+
+    public static void diary()
+    {
+        WriteLine("The opening passages are mundane, day-to-day writing about Rosella and Billy Adams, presumably the wife and son of the writer.");
+        WriteLine("You then see a few writings that catch your eye:");
+        WriteLine("'Dec. 1st\nRos has dived deep into the occult. At first, I thought it was just one of her many fancies but she has begun researching everything from The Power of Moonlight to Glyphs.'");
+        WriteLine("'Dec. 7th\Ros and Billy have spent a lot of time on occult websites, by his admission. He asked if I knew about 'Spirit Capturing' - of course not! He shrugged, said it's fascinating, and went back to the Office.'\n'Dec. 11 - Ros looks... haggard? Tired? She still has her dazzling smile but she looks drained.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("Dec. 26 - Billy and Ros have begun reorganizing the extra room in the basement, behind the Entertainment Room. When I asked about it, Ros just said 'You will see soon' and shooed me away.\nShe has also been acting more... aggressive, lately: not malicious, but quick to snap a reply to something, easy to anger, although not by me or Billy.\I don't like it.\n");
+        WriteLine("Jan. 10 - Billy is ill, possibly the flu. He spends almost all of his time either in the basement or on the Office computer.\nRos ordered some kind of metal door for the basement, called The Gate. Saw the email on the Office computer.");
+        WriteLine("Jan. 16 - The Gate arrived. It is a huge metal door with slots for something to go in. Ros seemed pleased... and worried?\nA group of Electricians arrived around noon, to presumably wire 'The Gate'. That's it! Ros and I need to talk!\n");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("You skip some grumblings about Electricians.");
+        WriteLine("Jan. 16 - Two things: Billy is very ill and Ros has changed for the worst.\nI confronted her about The Gate, the fact that Billy is sick, and her sudden obsession with the occult.\nHer reesponse? She roared at me! Like, 'Grizzly Bear' roared! She started screaming about 'being a powerless swine' and actually took a swing at me!\nWhat made this so bad: her eyes. They looked... evil. And... cunning. She went outside to meet the electricians; I didn't see or hear from her for the better part of 2 days.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("Jan. 20 - we rushed Billy to the hospital. He came upstairs, greeted me, took a couple of steps, and collapsed.");
+        WriteLine("Jan. 21\nMy son, a healthy 21 year old less than a month ago, is dead. Doctors said 'Heart Failure' but they didn't sound convinced.\nRos hugged me, then said that she wanted to 'claim the body'. I tried to stop her, saying that this is no time for morbid occult crap; she responded that 'you don't want to get in my way, Richard.' Again, those cunning, malevolent eye flashes.\n");
+
+        WriteLine("Jan. 23 - the local funeral home has Billy's body, after some kind of arrangement with the hospital and Ros. Ros has spent as much time there as she has spent here.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("Jan. 26\nRos said that she has to spend a couple of nights 'behind The Gate'; she would not elaborate. I agreed, kissed her, followed her to the basement, and watched as she closed The Gate.\nI then went upstairs to the Office and tried to see what she and Billy might have been researching.\nI saw that one of them had been looking heavy into using spirits to gain power?? That had to be Ros!\nHowever, one of the pages said that 'if you attempt the calling and you are not of sound mind and spirit, you could end up cursed or spiritually drained.'\nIs this what happened to Billy? And what has happened to Ros? I'm going to open The Gate!");
+
+        WriteLine("I opened the gate. It will be the last mistake of my life.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("What I saw when I opened the gate... impossible. Except, I SAW IT. It was Ros, but changing into... something dog-like, wolf-like. She had her back to me but KNEW I WAS THERE. She turned to me... oh man, she LOOKED AT ME. 'I went too deep and now I'm changed... for the better', she said.\n'I can take what I want, when I want. I can bring Billy back. And I will rule the creatures of the night!'\nShe then SMILED AT ME... and lunged.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("The next thing I know, I'm thrown all the way back to the stairs, bleeding everywhere.\nI crawl up the stairs to the Kitchen; as I go, I hear her say: 'Richard, I love you, which is why I didn't devour you. Go hide somewhere, until the full moon is passed. If you stay down here, I can't control what will happen.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+
+        WriteLine("The final entries are in a shaky hand.\n'I looked at the computer, on the way to a hiding place.\nI now know what happened to Ros.\nShe was Cursed.\nShe has become the worst form of a Lycanthrope: the Loup-Garou.\nShe can't be harmed, except by silver. She is stronger, faster, and more cunning, and she will now suffer from a bloodlust that is almost impossible to control.");
+        WriteLine("Press 'Enter' to continue.");
+        Console.ReadLine();
+        
+        WriteLine("And she knew this would happen... which is why she ordered The Gate. The Gate will help contain her when the Full Moon is her and she starts changing.\n\nI have a little bit of time left. I'm going to use those glyphs I saw on another page and draw them everywhere possible!");
+        WriteLine("I am hiding in the Wardrobe upstairs. I think it's the 28th.\nI heard her scream when she opened The Gate; maybe the glyphs work.\nRegardless, I'm too wounded to check and see. Whoever finds this diary, she is no longer human. On the Full Moon, if she's not in the basement, she will kill everyone near this house.");
+
+    }
+
 }
