@@ -446,7 +446,7 @@ namespace HouseFirst
 
                     WriteLine("The body is of a man, over 6 feet tall, with salt-and-pepper hair, a thin build, and a not-quite-middle-aged face.\nHis shirt appears to have been shredded, along with the torso underneath!\n");
                     WriteLine("You inspect the body. You find a piece of paper inside the front right pocket. On it, in a small, hurried-looking print is this:\n\n'She dabbled too deep! She is now a Lou-");
-                    WriteLine("The note is torn off at that point.\nYou don't know what a 'Lou' is but whatever it is, it was strong enough to kill a man and maybe stuff him in a wardrobe...?\n\nYou take the Note and pocket it, then put the body back into the Wardrobe - gruesome work.");
+                    WriteLine("The note is torn off at that point.\nYou don't know what a 'Lou' is but whatever it is, it sounds dangerous... and not natural.\n\nYou take the Note and pocket it, then put the body back into the Wardrobe - gruesome work.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
@@ -563,7 +563,16 @@ namespace HouseFirst
                 case 4:
                     //stairs
                     //start of 'Basement' namespace
-                    WriteLine("Code to come!");
+                    WriteLine("Despite inner warnings going off in your head, you decide to go down the stairs.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    WriteLine("The stairs have an odd odor to them, one you can't quite identify.\nYou notice that, on both sides of the stairs, on the walls, those same triangle-circle glyphs are drawn, in a dark-colored chalk or charcoal.\nThere are also small drops of blood on the stairs.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Basement.Rooms.stairs();
                     break;
                 case 5:
                     WriteLine("You decide to leave the Kitchen - you don't trust the feeling coming from the stairs.\nYou back to the T-intersection to gather your thoughts.");

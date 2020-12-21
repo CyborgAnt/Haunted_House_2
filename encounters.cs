@@ -329,7 +329,32 @@ class Encounters
 
     public static void grid()
     {
-        WriteLine("Code to come!");
+        string gridCode = 'QT97';       //may have to edit this formatting
+        WriteLine("Starting with the first tile you step on, enter the 4-tile path you take:");
+        var path = Console.ReadLine();
+        if(gridCode == path)
+        {
+            WriteLine("You step on the center tile and it glows a mellow green color.\nThe rest of the tiles glow green, then go out; it feels like the grid is now safe to walk on.\nSuddenly, the statue turns towards you!\nThe box that it is holding unfolds flat; resting on top of the now-flat box is a GREEN ORB.\n On one of the sides of the box is a number:\n'729'.\nYou take the GREEN ORB, jot down the number on a piece of paper, and leave the room.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+            SecondFloorRooms.stairs();
+        }
+        else
+        {
+            WriteLine("You step on the center tile to complete the 'path'. Nothing happens, at first.\nPress 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+            WriteLine("Suddenly, the center tile glows a bright red. At nearly the same time, the Statue turns towards you and opens its mouth!\nA glow begins to eminate from the mouth; you run towards the door...");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+            WriteLine("Before you can reach the door, a huge blast of heat, fire, and light hits you squarely in the back.\nThe blast is tremendous; it launches you several feet in the air and propels you several feet forward, smacking the outside hall with a jarring thud.\n");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            WriteLine("You nearly black out from the blast and the impact in the hall.\nYou hear a grinding sound; you see the Statue now at the doorway!\nYou start scrambling away, heading towards the stairs. You reach the stairs... and are hit by a 2nd blast, as the Statue could still see you.\n\nYou survived the 1st blast; you do not survive the second, as you are launched down the stairs, into the living room, in a smouldering heap.");
+            System.Environment.Exit(0);
+        }
     }
 
     public static void diary()

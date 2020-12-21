@@ -9,7 +9,7 @@ namespace Basement
     {
         public static void stairs()
         {
-            WriteLine("You arrive at the landing, at the bottom of the stairs from the Kitchen.\nThere are glyphs all over the floor and walls of the landing. Beyond the landing, there is a large room, possibly a Family Room or Entertainment Room.\n\nYou enter this room and notice what looks like a safe on the left wall. There is an open door on the right wall; it looks like the door opens onmto a laundry room.\n there is a bar area on the left, next to the safe, lined with stools. There is a doorway on the far end of the room, closed. Press 'Enter' to continue.");
+            WriteLine("You arrive at the landing at the bottom of the stairs, from the Kitchen.\nThere are glyphs all over the floor and walls of the landing. Beyond the landing, there is a large room, possibly a Family Room or Entertainment Room.\n\nYou enter this room and notice what looks like a safe on the left wall. There is an open door on the right wall; it looks like the door opens onmto a laundry room.\n there is a bar area on the left, next to the safe, lined with stools. There is a doorway on the far end of the room, closed. Press 'Enter' to continue.");
             Console.ReadLine();
             Console.Clear();
 
@@ -137,6 +137,7 @@ namespace Basement
         public static void antechamber()
         {
             // Gate is here
+            // wall section opens from Candle Holder, Bedroom stairs
             WriteLine("Code to come!");
         }
     }

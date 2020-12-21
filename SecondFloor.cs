@@ -60,7 +60,7 @@ class SecondFloorRooms
                 break;
             case 7:
                 //Bedroom2 - puzzle/trap
-                WriteLine("Code coming soon!");
+                bedroom2(); 
                 break;
             case 0: default:
                 //exit code
@@ -104,7 +104,7 @@ class SecondFloorRooms
                 Console.ReadLine();
                 Console.Clear();
 
-                WriteLine("Walk a path of 4, to open the box.\nMisstep and feel the wrath of Moon's Enforcer.\n\n2 steps to describe my soulmate, 2 steps for the year my son was born. The center will reveal your fate. Press 'Enter' to continue.");
+                WriteLine("Walk a path of 5, to open the box.\nMisstep and feel the wrath of Moon's Enforcer.\n\n2 steps to describe the love of my life, 2 steps for the year my son was born. Take the 5th step on the center to reveal your fate. Press 'Enter' to continue.");
                 Console.ReadLine();
                 
                 WriteLine("Do you step on the grid?\n'1' for 'Yes'\n'2' for 'No");
@@ -189,9 +189,10 @@ class SecondFloorRooms
 
                 if(down == 1)
                 {
-                    WriteLine("Code To Come!");
+                    WriteLine("You walk down the revealed stairs. It is a long flight of stairs; at the bottom, there is a wall... a section of the wall suddenly opens. Press 'Enter' to continue.");
                     // basement: wall near Gate
-
+                    WriteLine("You emerge in the antechamber of the basement.");
+                    Basement.Rooms.antechamber();
                 }
                 else
                 {
