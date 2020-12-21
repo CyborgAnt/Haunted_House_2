@@ -319,8 +319,6 @@ class Encounters
         WriteLine("You examine the body of the Ghoul. There are no discerning features on the body.\nYou check the clothing and find a wallet and some keys.\nInside the wallet, you find some cash, some random business cards, and an ID: \n\nBilly Adams\n10 Primrose Way\nAge: 21");
         WriteLine("Press 'Enter' to continue.");
 
-        bool wallet = true;     // player found the wallet; useful in next-to-last room
-
         WriteLine("You take a few moments to steady yourself.\nYou then head back to the window that you were unceremoniously yanked out of, and climb back in.");
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
@@ -339,11 +337,11 @@ class Encounters
         WriteLine("The opening passages are mundane, day-to-day writing about Rosella and Billy Adams, presumably the wife and son of the writer.");
         WriteLine("You then see a few writings that catch your eye:");
         WriteLine("'Dec. 1st\nRos has dived deep into the occult. At first, I thought it was just one of her many fancies but she has begun researching everything from The Power of Moonlight to Glyphs.'");
-        WriteLine("'Dec. 7th\Ros and Billy have spent a lot of time on occult websites, by his admission. He asked if I knew about 'Spirit Capturing' - of course not! He shrugged, said it's fascinating, and went back to the Office.'\n'Dec. 11 - Ros looks... haggard? Tired? She still has her dazzling smile but she looks drained.");
+        WriteLine("'Dec. 7th\nRos and Billy have spent a lot of time on occult websites, by his admission. He asked if I knew about 'Spirit Capturing' - of course not! He shrugged, said it's fascinating, and went back to the Office.'\n'Dec. 11 - Ros looks... haggard? Tired? She still has her dazzling smile but she looks drained.");
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
 
-        WriteLine("Dec. 26 - Billy and Ros have begun reorganizing the extra room in the basement, behind the Entertainment Room. When I asked about it, Ros just said 'You will see soon' and shooed me away.\nShe has also been acting more... aggressive, lately: not malicious, but quick to snap a reply to something, easy to anger, although not by me or Billy.\I don't like it.\n");
+        WriteLine("Dec. 26 - Billy and Ros have begun reorganizing the extra room in the basement, behind the Entertainment Room. When I asked about it, Ros just said 'You will see soon' and shooed me away.\nShe has also been acting more... aggressive, lately: not malicious, but quick to snap a reply to something, easy to anger, although not by me or Billy.\nI don't like it.\n");
         WriteLine("Jan. 10 - Billy is ill, possibly the flu. He spends almost all of his time either in the basement or on the Office computer.\nRos ordered some kind of metal door for the basement, called The Gate. Saw the email on the Office computer.");
         WriteLine("Jan. 16 - The Gate arrived. It is a huge metal door with slots for something to go in. Ros seemed pleased... and worried?\nA group of Electricians arrived around noon, to presumably wire 'The Gate'. That's it! Ros and I need to talk!\n");
         WriteLine("Press 'Enter' to continue.");

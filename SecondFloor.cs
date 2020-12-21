@@ -395,7 +395,7 @@ class SecondFloorHalls
     {
         //Hallway to the left of the floor
         Console.Clear();
-        WriteLine("You turn down the hall to the left.\nAbout 3/4 down the hall, you see 2 doors on the right.\One door looks like it leads to a large room; the other door is near the corner, where the hall turns again to the left.");
+        WriteLine("You turn down the hall to the left.\nAbout 3/4 down the hall, you see 2 doors on the right.\nOne door looks like it leads to a large room; the other door is near the corner, where the hall turns again to the left.");
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
         
@@ -413,7 +413,7 @@ class SecondFloorHalls
         WriteLine("|--------------|");
         WriteLine("\nWhat would you like to do?");
 
-        WriteLine("1. Enter the closest door\n2. Enter the farthest door\n3. Go around the corner, skipping the doors\4. Go back to the Stairs");
+        WriteLine("1. Enter the closest door\n2. Enter the farthest door\n3. Go around the corner, skipping the doors\n4. Go back to the Stairs");
         var hallChoiceLeft = Int32.Parse(Console.ReadLine());
 
         switch (hallChoiceLeft)
@@ -421,6 +421,9 @@ class SecondFloorHalls
             
             
             default:
+                WriteLine("You have exited the Program.");
+                System.Environment.Exit(0);
+                break;
         }  
 
     }
