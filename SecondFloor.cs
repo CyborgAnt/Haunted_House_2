@@ -18,7 +18,10 @@ class SecondFloorRooms
         WriteLine("To the left, there is a door at the end of the hall before the hall turns left. There is also a door on the left, just a few feet from the stairs.\nTo the right, the hall stretches for a few dozen feet before turning to the right. There is a door just to the right of the stairs.\nIn front of the stairs, there is an open door, looking in on a Guest Room or a Bedroom.\nPress 'Enter' to continue.");
 
         Console.ReadLine();
-
+        secondFloorStairsChoose();
+    }
+    public static void secondFloorStairsChoose()
+    {
         WriteLine("--------------\\--------------");
         WriteLine("\\                            ");
         WriteLine("    ---\\---     ---\\---    ");
@@ -56,10 +59,10 @@ class SecondFloorRooms
                 //Stairs
                 WriteLine("You return to the Stairs. You descend back into the Living Room. Press 'Enter' to continue.");
                 Console.ReadLine();
-                HouseFirst.FrontHouse.livingRoom();
+                FirstFloor.FrontHouse.livingRoom();
                 break;
             case 7:
-                //Bedroom2 - puzzle/trap
+                //Bedroom2 - change the trap
                 bedroom2(); 
                 break;
             case 0: default:
@@ -72,7 +75,7 @@ class SecondFloorRooms
 
     public static void bedroom2()
     {
-        //Statue-puzzle
+        //Statue-puzzle: DELELTE
         WriteLine("You open the door and look upon a sparse bedroom.\nThis room is... different. Press 'Enter' to continue.");
 
         Console.ReadLine();
@@ -170,7 +173,7 @@ class SecondFloorRooms
                 bathroom3();
                 break;
             case 3:     //Wardrobe - Orb
-                WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress on a hangar.\nYHowever, a closer look reveals a purple box on the ground, behind the shoes. You open the box to reveal...\n...a Dark Blue ORB. Press 'Enter' to continue.");
+                WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress on a hangar.\nYHowever, a closer look reveals a purple box on the ground, behind the shoes. You open the box to reveal...\n...a Dark Blue ORB. You also see a 3-digit number on the box: '331'. Press 'Enter' to continue.");
 
                 Console.ReadLine();
                 Console.Clear();
@@ -206,6 +209,54 @@ class SecondFloorRooms
                 bathroom3();
                 break;
             case 6:     //leave
+                WriteLine("You decide to go leave the room.");
+                SecondFloorHalls.hallRight();
+                break;
+
+            default:
+                WriteLine("You have exited the Program.");
+                System.Environment.Exit(0);
+                break;
+        }
+
+        //mbrSecond();
+    }
+
+    public static void mbrSecond    
+    {
+        
+        
+        WriteLine("\n1. Check the Closet\n2. Check the Desk\n3. Check the Wardrobe\n4. Check the Bathroom\n5. Leave the Master Bedroom");
+        var secretChoice = Int32.Parse(Console.ReadLine());
+        Console.Clear();
+        switch (secretChoice)
+        {
+            case 1:     //closet
+                WriteLine("You walk over to the Closet and look in.\nOther than standard clothes, you don't notice anything of importance. However, on the top shelf, you see a box of bullets.\nOpening the box, you see 20 SILVER BULLETS. You close the box, pocket it, and look around the room once more. Press 'Enter' to continue.");
+                //silverBullets += 20;
+                Console.ReadLine();
+                Console.Clear();
+                masterBedroom2();
+                break;
+            case 2:     //desk
+                ItemSearches.nothing();
+                break;
+            case 3:     //Wardrobe - Orb
+                WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress on a hangar.\nPress 'Enter' to continue.");
+                //However, a closer look reveals a purple box on the ground, behind the shoes. You open the box to reveal...\n...a Dark Blue ORB. WriteLine("This may be what some writings you came across earlier were referring to: 'Twin Orbs'. If you haven't found it already, you might want to find the second Orb - it seems like it might be important.");
+
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("You decide on your next move, as you head back to the door. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                masterBedroom2();
+                break;    
+            case 4:    //bathroom
+                bathroom3();
+                break;
+            case 5:     //leave
                 WriteLine("You decide to go leave the room.");
                 SecondFloorHalls.hallRight();
                 break;
@@ -258,7 +309,21 @@ class SecondFloorRooms
         switch (officeChoice)
         {
             case 1:     //Large Desk
-                WriteLine("Code coming!");
+                WriteLine("You check the Large Desk, specifically the Computer on the desk. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("The computer does not appear to be locked - SHAME! - so you start checking out the browsing history.\nThere are searches and web sites on a lot of occult topics. Two themes seem to pop up the most: 'Possession' and 'Protection Glyphs'.\nA disturbing article on Possession deals with the results when someone tries to summon a powerful spirit or Demon and it doesn't go as planned. The spirit/Demon may turn the summoner into a wolf-like monster known as a Loup-Garou. It walks upright, resembles a 'werewolf', and is resilient to almost all damage that isn't from Silver. It also is extremely evil. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+
+                WriteLine("You stop reading. A 'Loup-Garou', like from the Jim Butcher books?? There's no way those things are real...! Press 'Enter' to continue.");
+                Console.ReadLine();
+
+                WriteLine("Nevertheless, you take notes on what you read, and exit the computer. Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                office();
                 break;
             case 2:     //Small Desk - glyphs
                 WriteLine("You examine the top of the small desk.\nThere are over a dozen pages that have similar drawings on them:\nA triange, with each point surrounded by a different colored circle: red, dark blue, and green.\nHowever, one of the pages has a description written on it. Press 'Enter' to continue.");
@@ -348,10 +413,14 @@ class SecondFloorRooms
         {
             case 1:
                 //Orb box
-                WriteLine("Code is coming!");
+                WriteLine("You check out the Purple Box.\nInside the box is a round, BLUE ORB. You are not sure of it's purpose but you think it could be important.\nYou put the Orb back in its book, put the box in your backpack, and leave.");
+                Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                stairs();
                 break;
             case 2:
-                //Manual: Door needs Key to unlock, Orb and Locket to Activate Protection
+                //Manual
                 WriteLine("Code is coming!");
                 break;
             case 3:
@@ -361,7 +430,11 @@ class SecondFloorRooms
                 break;
             case 4:
                 //work benches - code on paper, drawings?
-                WriteLine("Code is coming!");
+                WriteLine("You don't mind much of importance; what you find are pages from manuals, schematics, and some random notes.\nOn one sheet paper, however, you find just a 4-digit number:\n'7521'.\You make a mental note of the number.");
+                Press 'Enter' to continue.");
+                Console.ReadLine();
+                Console.Clear();
+                stairs();
                 break;
             case 5:
                 //notice glyphs on wall

@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using static System.Console;
 
-namespace HouseFirst
+namespace FirstFloor
 {
     public class FrontHouse
     {
@@ -15,6 +15,10 @@ namespace HouseFirst
             Console.ReadLine();
             Console.Clear();
             
+            entrywayChoice();
+        }
+        public static void entrywayChoice()
+        {
             WriteLine("|                                               |");
             WriteLine("|                       ------------------------|");
             WriteLine("|                    |  |                       |");
@@ -27,14 +31,20 @@ namespace HouseFirst
             
                         
             WriteLine("You have a few choices to make. What would you like to do?");
-            WriteLine("Enter '1' to check the Left Door\nEnter '2' to check the Right Door\nEnter '3' to choose the Hall\nEnter '0' to end the program");
+            WriteLine("Enter '1' to check the Left Door\nEnter '2' to check the Right Door\nEnter '3' to choose the Hall\n'4' to Leave the House\nEnter '0' to end the program");
             var choiceEntry = Int32.Parse(ReadLine());
 
             switch (choiceEntry)
             {
                 case 0:
                     WriteLine("You have exited the program.");
+                    System.Environment.Exit(0);
                     break;
+                case 4:
+                    WriteLine("You decide to put off this investigation for another day.");
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    
                 case 1:
                     study();
                     break;
@@ -61,7 +71,10 @@ namespace HouseFirst
             WriteLine("It is a well-lit, well-furnished room.\nThere is a very large window on the wall to your left. A long bench is in front of the window.\nMultiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. \nOn the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
             WriteLine("There is no other door leading into, or out of, the room, other than the one you're standing at. Press 'Enter' to Continue.");
             Console.ReadLine();
-
+            studyChoose();
+        }    
+        public static void studyChoose()
+        {
             WriteLine("|                                               |");
             WriteLine("|                                               |");
             WriteLine("|--------------------------                     |");
@@ -84,7 +97,7 @@ namespace HouseFirst
                 case 2:
                     WriteLine("You check the small tables. You find nothing of interest or value. Press 'Enter' to continue and return to the Study.");
                     Console.ReadLine();
-                    study();
+                    studyChoose();
                     break;
                 case 3:
                     // return to the Entry
@@ -92,6 +105,7 @@ namespace HouseFirst
                     break;
                 default:
                     WriteLine("You have exited the program.");
+                    System.Environment.Exit(0);
                     break;
             }
 
@@ -107,7 +121,10 @@ namespace HouseFirst
             
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
-
+            lvrChoose();
+        }
+        public static void lvrChoose()
+        {
             WriteLine("|                                               |");
             WriteLine("|                ------------------------------ |");
             WriteLine("|             |  | Stairs |                     |");
@@ -131,7 +148,7 @@ namespace HouseFirst
                     Console.ReadLine();
                     Console.Clear();
 
-                    WriteLine("There isn't anything special about the Mantle itself. \nOn top of the Mantle, you find a few bills and other random pieces of paper: 2 or 3 receipts, a menu, and some scribbed notes of no importance.\nYou, however, do see a canle holder; odd, because it appears to be fastened to the Mantle.");
+                    WriteLine("There isn't anything special about the Mantle itself. \nOn top of the Mantle, you find a few bills and other random pieces of paper: 2 or 3 receipts, a menu, and some scribbed notes of no importance.\nYou, however, do see a candle holder; odd, because it appears to be fastened to the Mantle.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
 
@@ -139,7 +156,7 @@ namespace HouseFirst
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-                    livingRoom();
+                    lvrChoose();
                     break;
                 case 2:
                     // Window - near
@@ -153,7 +170,7 @@ namespace HouseFirst
 
                     Console.ReadLine();
                     Console.Clear();
-                    livingRoom();                  
+                    lvrChoose();                  
                     break;
                 case 3:
                     // Window - far
@@ -164,7 +181,7 @@ namespace HouseFirst
                     break;            
                 case 5:
                     ItemSearches.nothing();
-                    livingRoom();
+                    lvrChoose();
                     break;
                 case 6:
                     WriteLine("You return to the Entry.");
@@ -180,6 +197,7 @@ namespace HouseFirst
 
                 default:
                     WriteLine("You have exited the program.");
+                    System.Environment.Exit(0);
                     break;
             }
         }
@@ -191,6 +209,10 @@ namespace HouseFirst
             Console.WriteLine("There is a closet in the far left corner, and a door that opens onto a bathroom across from the closet.\nPress 'Enter' to continue.");
             
             Console.ReadLine();
+            bedroomChoose();
+        }
+        public static void bedroomChoose()
+        {
             WriteLine("|--------\\--------------\\----|     ");
             WriteLine("|                   |          |     ");
             WriteLine("|                   | Bathroom |     ");
@@ -318,6 +340,10 @@ namespace HouseFirst
             WriteLine("There are 3 main choices that you see:\n1. Straight ahead, there is a closed door.\n2. To your left, the hall continues a short distance until ending at a wall. On the left side of that hall branch, there are two doors: one opens onto what looks like a Bathroom, the other door was closed.\nOn the right side of that hall branch is another door, across from the closed door on the left.\n3. To your right, the hall ends at a door to the outside. On the left side, there is an opening that leads to what looks like a Kitchen.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
+            tHallChoose();
+        }
+        public static void tHallChoose()
+        {
             WriteLine("|-------------------------------------------------------------------|");
             WriteLine("|                    |                        |                     |");
             WriteLine("|                    |                        |                     |");
@@ -347,14 +373,14 @@ namespace HouseFirst
                 case 2:
                     // Left - Left Door
                     // Bedroom
-                    HouseFirst.FrontHouse.bedroom();
+                    FirstFloor.FrontHouse.bedroom();
                     break;
                 case 3:
                     // Left - Bathroom
                     WriteLine("You decide to take the left hallway. You check the Bathroom.\nPress 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-                    HouseFirst.FrontHouse.bathroom();
+                    FirstFloor.FrontHouse.bathroom();
                     break;
                 case 4:
                     // Dining Room
@@ -369,7 +395,7 @@ namespace HouseFirst
                     break;
                 case 7:
                     // Back to the Entry
-                    FrontHouse.entryway();
+                    FrontHouse.entrywayChoice();
                     break;        
                 default:
                     break;
@@ -379,6 +405,17 @@ namespace HouseFirst
         public static void masterBedroom()
         {
             Console.Clear();
+            WriteLine("You enter the Master Bedroom. This bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; it's doors are closed. There is a faint odor coming from the wardrobe's direction.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+            WriteLine("\nIn the center of the room is a canopied, King-sized bed, adorned with light blue sheets and a comforter.\nThere are also a few pieces of furniture - a couple of night stands, a dresser, and a small desk - that catch your eye but don't appear to have anything of importance or note on them.\nThere is a window on the left wall, near the Closet, and a larger window on the far wall, between the Closet and the Bathroom.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+
+        }
+        public static void masterbedroomChoose()
+        {    
             WriteLine("|-------------------------------------------------------------------|");
             WriteLine("|               |    |                        |                     |");
             WriteLine("|     Master    |    |                        |                     |");
@@ -390,14 +427,6 @@ namespace HouseFirst
             WriteLine("|                     |         |      |                            |");
             WriteLine("|      Bedroom        |         |      |                            |");                 
             WriteLine("|                     |         |      |                            |");
-            WriteLine("You enter the Master Bedroom. This bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; it's doors are closed. There is a faint odor coming from the wardrobe's direction.");
-            WriteLine("Press 'Enter' to continue.");
-            Console.ReadLine();
-
-            WriteLine("\nIn the center of the room is a canopied, King-sized bed, adorned with light blue sheets and a comforter.\nThere are also a few pieces of furniture - a couple of night stands, a dresser, and a small desk - that catch your eye but don't appear to have anything of importance or note on them.\nThere is a window on the left wall, near the Closet, and a larger window on the far wall, between the Closet and the Bathroom.");
-            WriteLine("Press 'Enter' to continue.");
-            Console.ReadLine();
-
             WriteLine("What would you like to do?");
             WriteLine("1. Leave the Master Bedroom and go back to the T-intersection\n2. Check the Closet\n3. Check the Large Window\n4. Check the Bathroom\n5. Check the Wardrobe\n0. Quit the Program");
 
@@ -407,7 +436,10 @@ namespace HouseFirst
             {
                 case 1:
                     WriteLine("You decide to leave the Master Bedroom and head back to the hallway intersection.\n");
-                    tHall();
+                    WriteLine("Press 'Enter' to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    tHallChoose();
                     break;
                 case 2:
                     //closet
@@ -423,8 +455,7 @@ namespace HouseFirst
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-
-                    masterBedroom();
+                    masterbedroomChoose();
                     break;
                 case 3:
                     //window - nothing
@@ -432,7 +463,7 @@ namespace HouseFirst
                     break;
                 case 4:
                     //bathroom - use code from FrontHouse
-                    HouseFirst.FrontHouse.bathroom();
+                    FirstFloor.FrontHouse.bathroom();
                     break;
                 case 5:
                     //wardrobe - body, note, code
@@ -450,19 +481,22 @@ namespace HouseFirst
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-                    masterBedroom();
+                    masterbedroomChoose();
                     break;
                 case 0: default:
                     WriteLine("You have exited the program.");
                     break;                    
-
-
             }
         }
 
         public static void diningRoom()
         {
             Console.Clear();
+            WriteLine("You open the door ahead and peer in.\n\nIt is a Dining Room, a very nice Dining Room, too! The main feature is the cherry room table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside, right now, is the light from a full moon.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
             WriteLine("|-------------------------------------------------------------------|");
             WriteLine("|                    |                        |                     |");
             WriteLine("|                    |                        |                     |");
@@ -474,10 +508,6 @@ namespace HouseFirst
             WriteLine("|                     |         |      |                            |");
             WriteLine("|                     |         |      |        Living Room         |");                 
             WriteLine("|                     |         |      |                            |");
-            WriteLine("You open the door ahead and peer in.\n\nIt is a Dining Room, a very nice Dining Room, too! The main feature is the cherry room table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside, right now, is the light from a full moon.");
-            WriteLine("Press 'Enter' to continue.");
-            Console.ReadLine();
-
             WriteLine("There is an elaborate, crystalline chandleer hanging from the ceiling; the lights are on.\n There a couple of chairs in the far right corner of the room.\nYou don't see anything else of significance but you do have the oddest feeling: 'this room is... safe'.\n\nYou leave the Dining Room and return to the T-intersection.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
@@ -518,7 +548,10 @@ namespace HouseFirst
             WriteLine("A lot of the cabinet doors are cracked, have scratches in them, and a myriad of other types of damage to them.\nThere are more 'red stains' on the floor, in the sink, and on top of a stove against the wall to the right. The stove also has something written on the oven door.\nThere are broken dishes in the sink and on the floor, in front of the sink.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
-
+            kitchenChoose();
+        }    
+        public static void kitchenChoose()
+        {
             WriteLine("What do you want to do next?");
             WriteLine("'1' to examine the Kitchen Island\n'2' to examine the Stove and Oven\n'3' to examine the Cabinets\n'4' to check out the Stairs\n'5' to exit the Kitchen\n'0' to Quit the Program");
 
@@ -537,13 +570,13 @@ namespace HouseFirst
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-                    kitchen();
+                    kitchenChoose();
                     break;
                 case 2:
                     //Stove; code
                     WriteLine("You inspect the stove closer.\nThe writing on the stove is a set of numbers:\n'7521'.\nPress 'Enter' to continue with the Kitchen Search.");
                     Console.ReadLine();
-                    kitchen();
+                    kitchenChoose();
                     break;
                 case 3:
                     //Cabinets
@@ -558,7 +591,7 @@ namespace HouseFirst
                     Console.ReadLine();
                     Console.Clear();
                     WriteLine("You pocket the news article.\nYou continue the Kitchen search.");
-                    kitchen();
+                    kitchenChoose();
                     break;
                 case 4:
                     //stairs
