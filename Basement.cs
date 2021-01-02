@@ -9,7 +9,7 @@ namespace Basement
     {
         public static void stairs()
         {
-            WriteLine("You arrive at the landing at the bottom of the stairs, from the Kitchen.\nThere are glyphs all over the floor and walls of the landing. Beyond the landing, there is a large room, possibly a Family Room or Entertainment Room.\n\nYou enter this room and notice what looks like a safe on the left wall. There is an open door on the right wall; it looks like the door opens onmto a laundry room.\n There is a bar area on the left, next to the safe, lined with stools.\nThere is a doorway on the far end of the room, closed. Press 'Enter' to continue.");
+            WriteLine("You arrive at the landing at the bottom of the stairs, from the Kitchen.\nThere are glyphs all over the floor and walls of the landing. Beyond the landing, there is a large room, possibly a Family Room or Entertainment Room.\n\nYou enter this room and notice what looks like a safe on the left wall. There is an open door on the right wall; it looks like the door opens on to a laundry room.\n There is a bar area on the left, next to the safe, lined with stools.\nThere is a doorway on the far end of the room, closed. Press 'Enter' to continue.");
             Console.ReadLine();
             Console.Clear();
 
@@ -123,7 +123,7 @@ namespace Basement
                     WriteLine("You ignore the room and go back up the stairs. Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-                    HouseFirst.Backhouse.kitchen();
+                    FirstFloor.Backhouse.kitchen();
                     break;
                 default:
                     WriteLine("You have exited the Program.");
@@ -143,7 +143,7 @@ namespace Basement
             Console.ReadLine();
             Console.Clear();
 
-            WriteLine("You see a large, square, empty room. There are only a few features in the room:\There is an opening in the left wall; there appear to be stairs that lead up into darkness\nThere are glowing glyphs on every wall and on the floor\nThere is a huge, steel door on the other side of the room.\n\nThere are a few options for you - what do you do?");
+            WriteLine("You see a large, square, empty room. There are only a few features in the room:\nThere is an opening in the left wall; there appear to be stairs that lead up into darkness\nThere are glowing glyphs on every wall and on the floor\nThere is a huge, steel door on the other side of the room.\n\nThere are a few options for you - what do you do?");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
             WriteLine("1 - Stay out of the Antechamber\n2 - Investigate the Glyphs\n3 - Investigate the Door Across The Room\n4 - Investigate the Opening and the Stairs");
@@ -157,7 +157,8 @@ namespace Basement
                     Console.ReadLine();
                     Console.Clear();
                     WriteLine("You head back upstairs to the kitchen, through the House, and back to the Entry.");
-                    HouseFirst.FrontHouse.entryway();       //leads to the option to leave the house
+                    FirstFloor.FrontHouse.entryway();       //leads to the option to leave the house
+                    break;
                 case 2:     //Glyphs
                     WriteLine("You take a closer look at some of the glyphs on the walls and floors, closest to the doorway you're standing in.\nThey are glowing a bright but pale blue color but you do not see an obvious power source.\nThey are the same pattern that you might have come across before: a triangle, with a different colored circle around each point.\n");
                     WriteLine("Press 'Enter' to continue.");
@@ -173,9 +174,9 @@ namespace Basement
                     break;
                 case 3:         //final, non-boss room
                     WriteLine("You walk over to the door and take a closer look.");
-                    boss();
+                    WriteLine("New code to come!");
                     break;    
-                case 4:         //
+                case 4: 
                     WriteLine("You walk over to the opening and look in.\nThere's a dark set of stairs that leads up. You take the stairs; as you approach the top, a section of the wall slides open!");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
@@ -183,7 +184,8 @@ namespace Basement
 
                     WriteLine("You emerge in a bedroom!\nThis is a large bedroom. There is a wardrobe, a large closet in the corner, a large office desk, and various chairs and benches.\nThere is also a door that leads to a bathroom.\nWhat would you like to do?");
 
-                    SecondFloorRooms.mbrSecond();
+                    SecondFloorRooms.masterBedroom2();
+                    break;
                 default:
                     WriteLine("You have exited the Program.");
                     System.Environment.Exit(0);
@@ -198,13 +200,13 @@ namespace Basement
         {
             //use old code
             //change Loup-Garou description
-            WriteLine("The door is made of a thick steel. The glyph pattern that you've seen before is on the door: triangle-with-circles. The circles on the door, however, are actually circlualar recesses.\nIn the 'top' circle, there is a red-colored sphere or orb.\n");
-            WriteLine("On the front of the door, right side, there are two buttons - one is red, the other is green.\The green button is glowing; this is likely a lock/unlock system. Press 'Enter' to continue.");
+            /* WriteLine("The door is made of a thick steel. The glyph pattern that you've seen before is on the door: triangle-with-circles. The circles on the door, however, are actually circlualar recesses.\nIn the 'top' circle, there is a red-colored sphere or orb.\n");
+            WriteLine("On the front of the door, right side, there are two buttons - one is red, the other is green.\nThe green button is glowing; this is likely a lock/unlock system. Press 'Enter' to continue.");
             Console.ReadLine();
 
             WriteLine("There is a display window under the triangle figure:\n'Use 1 Orb to initialize the containment; all 3 Orbs for maximum effect.");
             WriteLine("\nWhat do you do?");
-            WriteLine("1. Try to open the door\2. Insert Any Orbs You Might Have Found\n3. Leave and Search for Orbs");
+            WriteLine("1. Try to open the door\n2. Insert Any Orbs You Might Have Found\n3. Leave and Search for Orbs");
 
             var orbsChoice = Int32.Parse(Console.ReadLine());
             switch (orbsChoice)
@@ -240,9 +242,11 @@ namespace Basement
 
 
                 default:
+                    break;
             }
-
-
+            */
+            WriteLine("New code!");
         }
+        
     }
 }

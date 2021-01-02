@@ -81,7 +81,7 @@ class SecondFloorRooms
         Console.ReadLine();
         Console.Clear();
 
-        WriteLine("From the doorway, there is a bed to the left, against the wall. On the bed appears to be a note.\nAcross the room, in the right corner, is a 7-foot tall statue. The statue resembles a crouching Gargoyle, with its hands outstretched. In its left hand is what appears to be a stone box; the right hand is holding a sword, tip down.\n\nBetween the bed and the Gargoyle statue, on the floor, is a grid of numbers and letters. Press 'Enter' to continue.");
+        /* WriteLine("From the doorway, there is a bed to the left, against the wall. On the bed appears to be a note.\nAcross the room, in the right corner, is a 7-foot tall statue. The statue resembles a crouching Gargoyle, with its hands outstretched. In its left hand is what appears to be a stone box; the right hand is holding a sword, tip down.\n\nBetween the bed and the Gargoyle statue, on the floor, is a grid of numbers and letters. Press 'Enter' to continue.");
 
         Console.ReadLine();
 
@@ -138,17 +138,18 @@ class SecondFloorRooms
                 System.Environment.Exit(0);
                 break;
         }
+        */
     }
 
     public static void masterBedroom2()
     {
         //bullets; secret door to Basement
-        WriteLine("You enter the room from the Hall; you have to turn on your flashlight, first. \nYou locate the light switch, flick it up, and the room is illuminated. Press 'Enter' to continue.");
+        WriteLine("You enter the room from the Hall. You use your flashlight to locate a light switch. \nYou locate the switch, flick it up, and the room is illuminated. Press 'Enter' to continue.");
 
         Console.ReadLine();
         Console.Clear();
 
-        WriteLine("This is one of the biggest bedrooms you've seen! It could - and might have, at one time - double as a Studio apartment.\nFrom the doorway, there is a large bed in the left corner, next to a big window. Across from the bed, on the left side of the room, is a standing Wardrobe.\nAlmost directly across from the door is some sort of writing desk, with papers scattered on top of it; the desk sits in front of two parallel windows.\n Press 'Enter' to continue.");
+        WriteLine("You see an enormous bedrrom! It could - and might have, at one time - double as a Studio apartment.\nFrom the doorway, there is a large bed in the left corner, next to a big window. Across from the bed, on the left side of the room, is a standing Wardrobe.\nAlmost directly across from the door is some sort of writing desk, with papers scattered on top of it; the desk sits in front of two parallel windows.\n Press 'Enter' to continue.");
         Console.ReadLine();
 
         WriteLine("The right side of the room - looking from the doorway - is a little less furnished.\nThere is a bench against the wall, to the right of the door and on the opposite wall, next to the desk.\nThere is a doorway on the right wall - it opens onto a bathroom. To the right of the bathroom doorway, there is a closet, although you can't quite see what's in it. As you turn back around, you notice something sticking out of the wall, between the door and the bed. What do you do next?");
@@ -173,7 +174,8 @@ class SecondFloorRooms
                 bathroom3();
                 break;
             case 3:     //Wardrobe - Orb
-                WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress on a hangar.\nYHowever, a closer look reveals a purple box on the ground, behind the shoes. You open the box to reveal...\n...a Dark Blue ORB. You also see a 3-digit number on the box: '331'. Press 'Enter' to continue.");
+                // remove Orbs from the code
+                /* WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress on a hangar.\nYHowever, a closer look reveals a purple box on the ground, behind the shoes. You open the box to reveal...\n...a Dark Blue ORB. You also see a 3-digit number on the box: '331'. Press 'Enter' to continue.");
 
                 Console.ReadLine();
                 Console.Clear();
@@ -181,7 +183,8 @@ class SecondFloorRooms
                 WriteLine("This may be what some writings you came across earlier were referring to: 'Twin Orbs'. If you haven't found it already, you might want to find the second Orb - it seems like it might be important.");
                 WriteLine("You decide on your next move, as you head back to the door. Press 'Enter' to continue.");
 
-                //orb += 1;
+                */
+                WriteLine("New code to come! Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
                 masterBedroom2();
@@ -222,17 +225,15 @@ class SecondFloorRooms
         //mbrSecond();
     }
 
-    public static void mbrSecond    
-    {
-        
-        
+    public static void mbrSecondChoose()    
+    { 
         WriteLine("\n1. Check the Closet\n2. Check the Desk\n3. Check the Wardrobe\n4. Check the Bathroom\n5. Leave the Master Bedroom");
         var secretChoice = Int32.Parse(Console.ReadLine());
         Console.Clear();
         switch (secretChoice)
         {
             case 1:     //closet
-                WriteLine("You walk over to the Closet and look in.\nOther than standard clothes, you don't notice anything of importance. However, on the top shelf, you see a box of bullets.\nOpening the box, you see 20 SILVER BULLETS. You close the box, pocket it, and look around the room once more. Press 'Enter' to continue.");
+                WriteLine("You walk over to the Closet and look in.\nOther than standard clothes, you don't notice anything of importance. However, on the top shelf, you see a box of bullets.\nOpening the box, you see 20 SILVER BULLETS. You close the box, put it in your back pack, and look around the room once more. Press 'Enter' to continue.");
                 //silverBullets += 20;
                 Console.ReadLine();
                 Console.Clear();
@@ -241,17 +242,21 @@ class SecondFloorRooms
             case 2:     //desk
                 ItemSearches.nothing();
                 break;
-            case 3:     //Wardrobe - Orb
-                WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress on a hangar.\nPress 'Enter' to continue.");
+            case 3:     //Wardrobe - Orb - REMOVE OR CHANGE
+                WriteLine("You walk over to the Wardrobe and open the doors.\n\nIt's almost empty, except for some shoes on the ground and a lone, pale green dress, hanging.\nPress 'Enter' to continue.");
                 //However, a closer look reveals a purple box on the ground, behind the shoes. You open the box to reveal...\n...a Dark Blue ORB. WriteLine("This may be what some writings you came across earlier were referring to: 'Twin Orbs'. If you haven't found it already, you might want to find the second Orb - it seems like it might be important.");
+                Console.ReadLine();
+                Console.Clear();
 
+                WriteLine("You then notice the brochure next to the shoes: \n'Possessions are REAL!'.\nSkimming the brochure, it talks about how people, with sufficient training, can withstand a possession, turn the entity out, but keep all of it's powers. The drawback is that if the entity regains control, it can - and usually will - kill the person and anyone close to them.\nCREEPY.");
+
+                WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
 
                 WriteLine("You decide on your next move, as you head back to the door. Press 'Enter' to continue.");
                 Console.ReadLine();
-                Console.Clear();
-                masterBedroom2();
+                mbrSecondChoose();
                 break;    
             case 4:    //bathroom
                 bathroom3();
@@ -280,12 +285,12 @@ class SecondFloorRooms
     public static void porch()
     {
         //see movement in the yard
-        WriteLine("You open the door step out onto a 2nd Floor porch. Press 'Enter' to continue.");
+        WriteLine("You open the door and step out onto a 2nd Floor porch. Press 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
 
         WriteLine("There are a couple of wicker chairs on the porch, along with a loveseat.\nEven in the late evening light, you still have a pretty nice view from the porch.\nYou can see the ample front yard, movement in the yard, the trees off to the side, the -\n");
-        WriteLine("Wait. You focus your gaze back on the front yard. There is someone - or someTHING - circling the house, in a slow, shuffling gait.\nIt appears to have ragged clothes on... and something about its face seems... wrong.\nIt hasn't noticed you on the Porch.\n At this point, you decide a few things: \n1. This person or thing might be one of the sources of the 'strange sights' reports\n2. Between this and some of the items that you've seen so far, there is a supernatural element to this house, one that you don't like\n3. You need to wrap this up before it gets too dark outside. You have a gut feeling that you don't want to be outside the House at night.");
+        WriteLine("Wait. You focus your gaze back on the front yard. There is someone - or someTHING - circling the house, in a slow, shuffling gait.\nIt appears to have ragged clothes on... and something about its face seems... wrong.\nIt hasn't noticed you on the Porch, yet.\n At this point, you decide a few things: \n1. This person or thing might be one of the sources of the 'strange sights' reports\n2. Between this and some of the items that you've seen so far, there is a supernatural element to this house, one that you don't like\n3. You need to wrap this up before it gets too dark outside. You have a gut feeling that you don't want to be outside the House at night.");
         WriteLine("You head back inside. Press 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
@@ -294,7 +299,7 @@ class SecondFloorRooms
 
     public static void office()
     {
-        //code; links on comp. about werewolves and Loup-Garou; description of glyphs
+        //code; rewrite
         WriteLine("You look in the door and see an Office.\nFrom the hallway door, there is another door on the wall to the left, leading to a screened-in porch.\nIn the corner, there is a bookcase.");
         WriteLine("On the left wall of the room, there is another bookcase next to the first one.\nAgainst the wall, across from the door, are two desks: the larger desk has a computer, speakers, two monitors, and an office chair; the small desk has a printer, a ream of paper, some scattered loose papers on it, and a second office chair.");
         WriteLine("On the right wall of the room, there is an open door, looking in on some kind of storage room or closet.\nNext to the door is a large floor lamp.\nIn the center of the room are a few stacks of books and boxes; the boxes appear to be mainly files and old magazinews.");
@@ -330,7 +335,7 @@ class SecondFloorRooms
                 Console.ReadLine();
                 Console.Clear();
 
-                WriteLine("'The Trisect Alignment'\n'The Trisect Alginment is a powerful glyph, used to not only contain hostile entities but to weaken them in their containment. The glyph combines the strength of the heart of the glyph creator (Red Circle) with the strengh of the Spirit (Green Circle), and adds an element of supernatural protection (Blue Circle). It is especially potent versus Lycanthropes, such as werewolves, and their more demonic cousin, the Loup-Garou. In the case of the Loup-Garou, the possessed person will ward a particular room or rooms with the Trisect Alignment and spend the night of the full moon in the room, where the Alignment weakens the Bloodlust in the Loup-Garou.");
+                WriteLine("'The Trisect Alignment'\n'The Trisect Alignment is a powerful glyph, used to not only contain hostile entities but to weaken them in their containment. The glyph combines the strength of the heart of the glyph creator (Red Circle) with the strengh of the Spirit (Green Circle), and adds an element of supernatural protection (Blue Circle). It is especially potent versus Lycanthropes, such as werewolves, and their more demonic cousin, the Loup-Garou. In the case of the Loup-Garou, the possessed person will ward a particular room or rooms with the Trisect Alignment and spend the night of the full moon in the room, where the Alignment weakens the Bloodlust in the Loup-Garou.");
                 WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
                 WriteLine("You finish searching the Small Desk. The hairs on the back of your neck are standing up at Full Attention: what is going on in this place??");
@@ -354,8 +359,8 @@ class SecondFloorRooms
                 Console.Clear();
                 
                 Encounters.diary();        //under "Encounters"
-                WriteLine("You are absolutely terrified: you will probably have to fight - and kill - Ros Adams to close this because you have no douby that she is the ultimate cause of all of the reports surrounding this House.");
-                WriteLine("You leave Office and go back into the Hall, resolving to finish this search of the 2nd Floor quickly. You have a date with The Gate and Ros Adams.");
+                WriteLine("You are absolutely terrified: you will probably have to fight - and kill - Ros Adams to close this case, because you have no doubt that she is the ultimate cause of all of the reports surrounding this House.");
+                WriteLine("You leave Office and go back into the Hall, resolving to finish this search of the 2nd Floor quickly. You have a date with Ros Adams.");
                 SecondFloorHalls.hallLeft();
                 break;
             case 6:     //Leave
@@ -373,7 +378,7 @@ class SecondFloorRooms
     public static void upstairsCloset()
     {
         //info on Billy Adams; resurrected?
-        WriteLine("You open the door and see a very large closet, almost a storage room. It is large enough enough for multiple people to be in at once, but not quite large enough for multiple pieces of furniture.\nYou notice boxes and crates everywhere. On top of a stack of furniture, you notice an odd pamphlet:\n'Resurrection and What To Beware Of'\n");
+        WriteLine("You open the door and see a very large closet, almost a storage room. \nYou notice boxes and crates everywhere. On top of a stack of furniture, you notice an odd pamphlet:\n'Resurrection and What To Beware Of'\n");
         WriteLine("More code later!");
     }
 
@@ -391,7 +396,7 @@ class SecondFloorRooms
 
     public static void behindTheWalls()
     {
-        //code on wall; wires; info about Orb, Locket
+        //code on wall; wires
         WriteLine("You enter a narrow, U-shaped room.\nThis looks like a space where wires and cables that go between the floors of the house can run, without being seen.\nPress 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
@@ -401,49 +406,44 @@ class SecondFloorRooms
         Console.ReadLine();
         Console.Clear();
 
-        WriteLine("As you walk around the room, you notice on one of the smaller shelves a small, unlabeled, purple box.\nOn one of the larger work benches, a manual catches your eye: 'The Guardian Door'.\nYou have a few choices - what would you like to do?");
-        WriteLine("Press 'Enter' to continue.");
+        WriteLine("As you walk around the room, you notice on one of the larger work benches, a manual: 'The Guardian Door'.\nYou have a few choices - what would you like to do?");
+        WriteLine("Press 'Enter' to continue.\n");
         Console.ReadLine();
-
-        WriteLine("'1' to Inspect the Purple Box\n'2' to Check out the Manual\n'3' to Check the other Small Shelves\n'4' to Check the other Work Benches\n'5' to Check the Room\n'6' to Leave the Room through either Door\n'0' to Quit the Program");
+        behindWallsChoose();
+    }
+    public static void behindWallsChoose()
+    {
+        WriteLine("'1' to Check out the Manual\n'2' to Check the other Small Shelves\n'3' to Check the other Work Benches\n'4' to Check the Room\n'5' to Leave the Room through either Door\n'0' to Quit the Program");
 
         var btwChoice = Int32.Parse(Console.ReadLine());
 
         switch (btwChoice)
         {
             case 1:
-                //Orb box
-                WriteLine("You check out the Purple Box.\nInside the box is a round, BLUE ORB. You are not sure of it's purpose but you think it could be important.\nYou put the Orb back in its book, put the box in your backpack, and leave.");
-                Press 'Enter' to continue.");
-                Console.ReadLine();
-                Console.Clear();
-                stairs();
-                break;
-            case 2:
                 //Manual
                 WriteLine("Code is coming!");
                 break;
-            case 3:
+            case 2:
                 //shelves - nothing
                 WriteLine("You check the shelves of the room. There are some randome hardware - wires, loose bolts, etc. - and some other odds and ends, but you see nothing else of note.");
-                behindTheWalls();
+                behindWallsChoose();
                 break;
-            case 4:
+            case 3:
                 //work benches - code on paper, drawings?
-                WriteLine("You don't mind much of importance; what you find are pages from manuals, schematics, and some random notes.\nOn one sheet paper, however, you find just a 4-digit number:\n'7521'.\You make a mental note of the number.");
-                Press 'Enter' to continue.");
+                WriteLine("You don't see much of importance; what you find are pages from manuals, schematics, and some random notes.\nOn one sheet paper, however, you find just a 4-digit number:\n'7521'.\nYou make a mental note of the number.");
+                WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
-                stairs();
+                behindWallsChoose();
                 break;
-            case 5:
+            case 4:
                 //notice glyphs on wall
                 WriteLine("As you walk around the room, you notice that there are drawings on the walls, specifically near the doors and back by the thick wires running into the walls. You may have seen them in other parts of the house: A triangle, with red, green, and blue circles drawn around the points of the triangle.\nThese drawings are also scratched into the floor, although the circles are all black; maybe they are unfinished?\nYou leave the room and go back to the stairs; it's a central, safe area to plan your next move. Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
                 stairs();
                 break;
-            case 6:
+            case 5:
                 //leave
                 WriteLine("You end your inspection of the U-shaped room and back to the Stairs.");
                 WriteLine("Press 'Enter' to continue.");
@@ -456,10 +456,7 @@ class SecondFloorRooms
                 WriteLine("You have exited the Program.");
                 System.Environment.Exit(0);
                 break;
-
         }
-
-
     }
 }
 

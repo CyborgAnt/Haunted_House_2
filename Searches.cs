@@ -100,7 +100,7 @@ class ItemSearches
 
         Console.ReadLine();
         Console.Clear();
-        HouseFirst.FrontHouse.livingRoom();
+        FirstFloor.FrontHouse.livingRoom();
 
     }
 

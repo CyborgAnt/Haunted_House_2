@@ -44,6 +44,7 @@ namespace FirstFloor
                     WriteLine("You decide to put off this investigation for another day.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
+                    break;
                     
                 case 1:
                     study();
