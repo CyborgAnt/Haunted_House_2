@@ -9,8 +9,13 @@ namespace FirstFloor
         public static void entryway()
         {
             
+<<<<<<< HEAD
             WriteLine("You enter into a small, square entryway.\nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself is faintly lit by the late evening sunlight, coming in from the open door.");
             WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more of a generic brown color, and not nearly as thick.");
+=======
+            WriteLine("You enter in a small entryway, a square, nearly empty room. \nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself was fairly dark; evening sunlight, coming in from windows in the front door, is the only source of light in the entry.");
+            WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more 'generic', and not nearly as thick.");
+>>>>>>> 674ca06c0546495661639bb03c76af50037380d7
             WriteLine("Press 'Enter to continue.");
             Console.ReadLine();
             Console.Clear();
@@ -44,6 +49,7 @@ namespace FirstFloor
                     WriteLine("You decide to put off this investigation for another day.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
+                    break;
                     
                 case 1:
                     study();

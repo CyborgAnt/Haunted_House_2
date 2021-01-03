@@ -39,14 +39,14 @@ class Encounters
         Console.WriteLine("The hand reaches for your chest... and passes through it. There were no physical effects but you are pretty shaken up. You hear, in the distance, a low, ominous chuckle. You continue on.");
         Console.WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
-        HouseFirst.FrontHouse.hallway();
+        FirstFloor.FrontHouse.hallway();
     }
     public static void handSurvived()
     {
         Console.WriteLine("The hand reaches for you... but you manage to dodge to one side. It passes through the wall of the hallway, and disappears. You hear a short but low chuckle from... somewhere. You decide to continue with the hall... ");
         Console.WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
-        HouseFirst.FrontHouse.hallway();
+        FirstFloor.FrontHouse.hallway();
     }
 
     public static void window2()
@@ -66,7 +66,7 @@ class Encounters
                 WriteLine("Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
-                HouseFirst.FrontHouse.livingRoom();
+                FirstFloor.FrontHouse.livingRoom();
                 break;
             case 'N': case 'n':
                 //code - snatched?!
@@ -167,7 +167,7 @@ class Encounters
                 WriteLine("You return to the Living Room. Press 'Enter' to continue.");
                 Console.ReadLine();
                 Console.Clear();
-                HouseFirst.FrontHouse.livingRoom();
+                FirstFloor.FrontHouse.livingRoom();
                 break;
             case 2:
                 //to the car
@@ -202,7 +202,7 @@ class Encounters
                         Console.Clear();
                         WriteLine("You examine the body of the Ghoul. There are no discerning features on the body, such as scars.\nYou check the tattered clothing and find a wallet and some keys.\nInside the wallet, you find some cash, some random business cards, and an ID: \n\nBilly Adams\n10 Primrose Way\nAge: 21");
                         WriteLine("You take the walley and keys and go back into the Manor.\n");
-                        HouseFirst.FrontHouse.entryway();
+                        FirstFloor.FrontHouse.entryway();
 
                         break;
                     default:
@@ -323,39 +323,10 @@ class Encounters
         WriteLine("Press 'Enter' to continue.");
         Console.ReadLine();
         Console.Clear();
-        HouseFirst.FrontHouse.livingRoom();
+        FirstFloor.FrontHouse.livingRoom();
 
     }
 
-    public static void grid()
-    {
-        string gridCode = 'QT97';       //may have to edit this formatting
-        WriteLine("Starting with the first tile you step on, enter the 4-tile path you take:");
-        var path = Console.ReadLine();
-        if(gridCode == path)
-        {
-            WriteLine("You step on the center tile and it glows a mellow green color.\nThe rest of the tiles glow green, then go out; it feels like the grid is now safe to walk on.\nSuddenly, the statue turns towards you!\nThe box that it is holding unfolds flat; resting on top of the now-flat box is a GREEN ORB.\n On one of the sides of the box is a number:\n'729'.\nYou take the GREEN ORB, jot down the number on a piece of paper, and leave the room.");
-            WriteLine("Press 'Enter' to continue.");
-            Console.ReadLine();
-            Console.Clear();
-            SecondFloorRooms.stairs();
-        }
-        else
-        {
-            WriteLine("You step on the center tile to complete the 'path'. Nothing happens, at first.\nPress 'Enter' to continue.");
-            Console.ReadLine();
-            Console.Clear();
-            WriteLine("Suddenly, the center tile glows a bright red. At nearly the same time, the Statue turns towards you and opens its mouth!\nA glow begins to eminate from the mouth; you run towards the door...");
-            WriteLine("Press 'Enter' to continue.");
-            Console.ReadLine();
-            Console.Clear();
-            WriteLine("Before you can reach the door, a huge blast of heat, fire, and light hits you squarely in the back.\nThe blast is tremendous; it launches you several feet in the air and propels you several feet forward, smacking the outside hall with a jarring thud.\n");
-            WriteLine("Press 'Enter' to continue.");
-            Console.ReadLine();
-            WriteLine("You nearly black out from the blast and the impact in the hall.\nYou hear a grinding sound; you see the Statue now at the doorway!\nYou start scrambling away, heading towards the stairs. You reach the stairs... and are hit by a 2nd blast, as the Statue could still see you.\n\nYou survived the 1st blast; you do not survive the second, as you are launched down the stairs, into the living room, in a smouldering heap.");
-            System.Environment.Exit(0);
-        }
-    }
 
     public static void diary()
     {
