@@ -9,8 +9,8 @@ namespace FirstFloor
         public static void entryway()
         {
             
-            WriteLine("You enter in a small entryway, a square, nearly empty room. \nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself was fairly dark; evening sunlight, coming in from windows in the front door, is the only source of light in the entry.");
-            WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more of a generic color, and not nearly as thick.");
+            WriteLine("You enter into a small, square entryway.\nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself is faintly lit by the late evening sunlight, coming in from the open door.");
+            WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more of a generic brown color, and not nearly as thick.");
             WriteLine("Press 'Enter to continue.");
             Console.ReadLine();
             Console.Clear();
@@ -64,10 +64,9 @@ namespace FirstFloor
         public static void study()
         {
             // left door
-            WriteLine("You open the door to the left and see a Study.");
-            WriteLine("For an 'Abandoned' house, this room is in near-perfect shape. Press 'Enter' to continue.");
+            WriteLine("You open the door to the left and see a Study. Press 'Enter' to continue.");
             Console.ReadLine();
-            Console.Clear();
+
             WriteLine("It is a well-lit, well-furnished room.\nThere is a very large window on the wall to your left. A long bench is in front of the window.\nMultiple comfortable-looking chairs dot the room, as well as small tables in front of some of the chairs. \nOn the wall to your right, rows of tall book cases are nearly full with hardcover and paperback books, some journals, magazines, and encyclopedias.");
             WriteLine("There is no other door leading into, or out of, the room, other than the one you're standing at. Press 'Enter' to Continue.");
             Console.ReadLine();
@@ -91,8 +90,10 @@ namespace FirstFloor
             switch (studyChoice)
             {
                 case 1:
-                    //bookcase search
-                    ItemSearches.studyBookcases();
+                    //bookcase search - rewrite!
+                    WriteLine("You browse the titles on the book case.\nThere are a lot of Horror, Science Fiction, and Mystery books on one bookcase.\nOn another, there many books on History and Gography.\nOne case is almost entirely on the Occult: Spirits and Ghosts, Magic and Sorcery, etc.\nYou don't see anything that particularly sticks out, however. Press 'Enter' to Continue.");
+                    Console.ReadLine();
+                    studyChoose();
                     break;
                 case 2:
                     WriteLine("You check the small tables. You find nothing of interest or value. Press 'Enter' to continue and return to the Study.");
@@ -250,7 +251,7 @@ namespace FirstFloor
                 case 4:
                     WriteLine("You leave the bedroom. Press 'Enter' to continue.");
                     Console.ReadLine();
-                    Backhouse.tHall();        // check this branch            
+                    Backhouse.tHallChoose();        // check this branch            
                     break;
                 default:
                     WriteLine("You have exited the program.");
@@ -309,7 +310,7 @@ namespace FirstFloor
         public static void bathroom()
         {
             //bathroom also has an entry from the Left Branch of the New Hall
-            WriteLine("You look into the bathroom");
+            WriteLine("You look into the bathroom:");
             WriteLine("|---------\\-------------\\----|     ");
             WriteLine("|                   |          |     ");
             WriteLine("|                   | Bathroom |     ");
@@ -405,7 +406,7 @@ namespace FirstFloor
         public static void masterBedroom()
         {
             Console.Clear();
-            WriteLine("You enter the Master Bedroom. This bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; it's doors are closed. There is a faint odor coming from the wardrobe's direction.");
+            WriteLine("You enter the Master Bedroom. This bedroom is massive.\nThere is a closet in the far left room, with the door open; you can't see everything that might be in it from where you're standing.\nIn the right corner, a door opens onto a private bathroom.\nTo the right of the door is a tall wardrobe, made of cherry wood; the doors are closed. There is also a faint odor coming from the wardrobe's direction.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
@@ -467,17 +468,15 @@ namespace FirstFloor
                     break;
                 case 5:
                     //wardrobe - body, note, code
-                    WriteLine("You inspect the Wardrobe.\nAs you walk closer, the faint odor grows stronger and more unpleasant.\n You open the Wardrobe...");
-                    WriteLine("Press 'Enter' to continue.");
-                    Console.ReadLine();
+                    WriteLine("You inspect the Wardrobe.\nAs you walk closer, the faint odor grows stronger and much more unpleasant.\n You open the Wardrobe...");
 
                     WriteLine("... and a body tumbles out!");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
 
                     WriteLine("The body is of a man, over 6 feet tall, with salt-and-pepper hair, a thin build, and a not-quite-middle-aged face.\nHis shirt appears to have been shredded, along with the torso underneath!\n");
-                    WriteLine("You inspect the body. You find a piece of paper inside the front right pocket. On it, in a small, hurried-looking print is this:\n\n'She dabbled too deep! She is now a Lou-");
-                    WriteLine("The note is torn off at that point.\nYou don't know what a 'Lou' is but whatever it is, it sounds dangerous... and not natural.\n\nYou take the Note and pocket it, then put the body back into the Wardrobe - gruesome work.");
+                    WriteLine("You inspect the body. You find a piece of paper inside the front right pocket. On it, in a small, hurried-looking print is this:\n\n'She is possessed! She-");
+                    WriteLine("The note is torn off at that point.\nYou don't know who 'she' is, but 'she' is now Prime Suspect #1 in whatever is going on here.\nYou take the Note and pocket it, then put the body back into the Wardrobe - gruesome work.");
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
@@ -492,7 +491,8 @@ namespace FirstFloor
         public static void diningRoom()
         {
             Console.Clear();
-            WriteLine("You open the door ahead and peer in.\n\nIt is a Dining Room, a very nice Dining Room, too! The main feature is the cherry room table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside, right now, is the light from a full moon.");
+            //add newspaper article
+            WriteLine("You open the door ahead and peer in.\nIt is a Dining Room, a very nice Dining Room, too. The main feature is the long cherry table that sits in the middle of the room, surrounded by 8 chairs of equal beauty.\nIn the far left corner, there is a china cabinet with a few nice-looking dinner sets.\nA large window, set into the far wall, would let light into the room; the only light available from outside is currently the late evening sunset.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
             Console.Clear();
@@ -508,7 +508,13 @@ namespace FirstFloor
             WriteLine("|                     |         |      |                            |");
             WriteLine("|                     |         |      |        Living Room         |");                 
             WriteLine("|                     |         |      |                            |");
-            WriteLine("There is an elaborate, crystalline chandleer hanging from the ceiling; the lights are on.\n There a couple of chairs in the far right corner of the room.\nYou don't see anything else of significance but you do have the oddest feeling: 'this room is... safe'.\n\nYou leave the Dining Room and return to the T-intersection.");
+            WriteLine("There is an elaborate, crystalline chandlier hanging from the ceiling; the lights are on.\n There a couple of chairs in the far right corner of the room.\nYou don't see anything else of significance but you do have the oddest feeling: 'this room is... safe'.\n");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("As you turn to leave, you notice a piece of paper on one of the chairs. It is a newspaper clipping.\n'3 More Mutilated Bodies Found'.\n");
+            WriteLine("The article states that 12 bodies have now been found in the last 3 months. They all have been found 1-2 nights before the full moon... and most have been found in the neighborhood of the Adams Manor.\nUH OH.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
             tHall();
@@ -585,8 +591,8 @@ namespace FirstFloor
                     WriteLine("The middle set of cabinets contain dishes, plastic containers, glasses, and cups. Nothing else catches your eye. Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();
-                    WriteLine("The last set of cabinets contains canned goods, various jarred foods, and some various snack crackers. On top of some of the canned goods is a piece of folded paper. It is a newspaper article from last month, with the title:\n'3 More Mutilated Bodies Found'.\n");
-                    WriteLine("The article states that 12 bodies have now been found in the last 3 months: 3 last month, 5 the month before, 4 the month before that. They all have been found 1-2 nights before the full moon... and most have been found in the neighborhood of the Adams Manor.\nUh oh.");
+                    /* WriteLine("The last set of cabinets contains canned goods, various jarred foods, and some various snack crackers. On top of some of the canned goods is a piece of folded paper. It is a newspaper article from last month, with the title:\n'3 More Mutilated Bodies Found'.\n");
+                    WriteLine("The article states that 12 bodies have now been found in the last 3 months: 3 last month, 5 the month before, 4 the month before that. They all have been found 1-2 nights before the full moon... and most have been found in the neighborhood of the Adams Manor.\nUh oh."); */
                     WriteLine("Press 'Enter' to continue.");
                     Console.ReadLine();
                     Console.Clear();

@@ -13,7 +13,7 @@ class ItemSearches
         
     }
     
-    public static void studyBookcases()
+    /* public static void studyBookcases()
     {
         WriteLine("You check the full bookcases. Press 'Enter' to continue.");
         Console.ReadLine();
@@ -79,9 +79,9 @@ class ItemSearches
             default:
                 WriteLine("You have exited the program.");
                 return;    
-        }  */    
+        }     
 
-    }
+    } */
 
     public static void couch()
     {
