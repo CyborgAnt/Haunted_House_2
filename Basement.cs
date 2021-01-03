@@ -151,13 +151,172 @@ namespace Basement
 
     class Boss
     {
-        public static void Garou()
+        public static void beforeGarou()
         {
             WriteLine("The door opens onto a small hall that turns to the right.\nYou sneak up to the turn of the hall and see a very large chamber.\nThere are brightly glowing glyphs everywhere, except for the far side of the room. Instead, there is a large, glowing chalk circle on the ground. Inside of it, with it's back turned away from you, is a squatting figure.");
             WriteLine("Press 'Enter' to continue.");
             Console.ReadLine();
 
-            WriteLine("Even squatting, you can tell that the figure is well over 6 feet tall.");
+            WriteLine("Even squatting, you can tell that the figure is well over 6 feet tall.\nIt is also a woman. She has not notice your presence.\nWhat do you do next?");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            beforeChoose();
+        }
+        public static void beforeChoose()
+        {
+            WriteLine("1. Enter the Chamber and Engage Her\n2. Stay Where You're At\n3. Retreat Back to the Stairs");
+            var bossChoice = Int32.Parse(Console.ReadLine());
+
+            switch(bossChoice)
+            {
+                case 3:
+                    // retreat
+                    WriteLine("You back up - SLOWLY - and close the steel door behind you.\nYou stop at the base of the stairs that led down from the kitchen, trying to formulate some plan...");
+                    stairs();
+                    break;
+                case 2:
+                    // hold
+                    WriteLine("You hold your position.\nAs you crouch, you hear a voice from the chamber:\n'I'm going to give you 30 seconds to leave before I come for you.'\nDo you leave?"); 
+                    WriteLine("1 - Yes\n2 - No");
+                    var leave = Int32.Parse(Console.ReadLine());
+                    if(leave == 1)
+                    {
+                        WriteLine("That voice did not remotely sound like it came from a woman... or a human. Completely unnerved, you leave the hall, close the steel door behind you, and leave the basement.\nYou head back through the kitchen, to the entry, and out the door.");
+                        WriteLine("Press 'Enter' to continue.");
+                        Console.ReadLine();
+                        Console.Clear();
+
+                        WriteLine("Standing on the porch, you wonder how you are going to report what - ");
+                        WriteLine("Press 'Enter' to continue.");
+                        Console.ReadLine();
+
+                        WriteLine("To your left, something shambles towards you. It looks like... like a zombie?!? Before you can comprehend what you are seeing, it lunges at you with incredible speed.\And large claws.\nThose claws devastate your chest and torso in one gigantic rake.\nYou are dead before your body hits the ground, as 3 other similar creatures - Ghasts - emerge from the trees to feed.");
+                        System.Environment.Exit(0);
+                    }
+                    if(leave == 0)
+                    {
+                        WriteLine("You ignore the dread that threatens to overwhelm you after hearing that voice.\nYou load your gun with some of the silver bullets, take a deep breath, and walk around the corner...");
+                        WriteLine("Press 'Enter' to continue.");
+                        Console.ReadLine();
+                        Console.Clear();
+
+                        bossFight();
+                    }
+                    break;
+                case 1:
+                    bossFight();
+                    break;
+                default:
+                    WriteLine("You have exited the program.");
+                    System.Environment.Exit(0);
+                    break;
+
+            }
+
+        }
+
+        public static void bossFight()
+        {
+            //refactor old code
+            WriteLine("You walk around the corner, into the chamber. The figure turns around to face you.\nIt is a red-haired woman, with very piercing blue eyes. You recognize her, vaguely, as Ros Adams, the 'missing' wife of the Adams Manor.\n\nNothing else about her resembles humanity.");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("Her face looks too tall and... too long, almost like a muzzle.\nShe grins and displays rows of canine-like teeth.\nHer clothes are ripped but still mostly intact. However, what you can see of her body looks incredibly lean and powerful.\nBut what is the most disturbing are her eyes.\nThere is a combination of malevolence and... amusement?... in those eyes that make you weak in the knees\nShe will likely enjoy killing you, if given the chance!");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            WriteLine("You shout: 'I know about this place, Ros! I know that you have dabbled in the occult! I know that you fatally wounded your husband! I know that you are possessed and like it! I'm ending this NOW!'");
+            WriteLine("Ros Adams just responds with a low, inhuman chuckle, and starts towards you.\n You pull out the gun, start circling the room, and take aim...!");
+            
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+
+            // setting up variables for the encounter
+            int healthLoupGarou = 100; 	// or higher; adjust, if time
+            int playerHealth = 60; 	// or higher
+            int armorLoupGarou = 14;
+            int armorPlayer = 10;
+            
+            
+
+            // loop for the fight
+            // the player and LG ‘roll’ a d20 to hit; if they connect, they do damage
+            // the player ‘rolls a d8’ to damage, the LG rolls a d12; critical hits occur at the max value – double damage
+
+            while((healthLoupGarou > 0) || (playerHealth > 0))
+            { 
+                if(playerHealth <= 0)
+                    playerEnd();
+                if(healthLoupGarou <= 0)
+                    loupGarouEnd();     
+                
+                Console.WriteLine("You have {0} Hit Points, while Ros-Loup-Garou has {1} Hit Points.", playerHealth, healthLoupGarou);
+                
+                Console.WriteLine("You take a shot…");
+                
+                // for the player
+                Random rd = new Random();
+                int roll = rd.Next(1, 21);      // simulating a 20-sided die roll
+                Random dmg = new Random();
+                int damage = dmg.Next(3,11);     // 3-10 points of damage per shot
+
+                if(roll >= armorLoupGarou)
+                {		
+                    WriteLine("Hit! You do {0} points of damage!", damage);
+                    healthLoupGarou -= damage;
+                    WriteLine("It now has {0} Hit Points", healthLoupGarou);
+                }
+                else
+                {
+                    WriteLine("Miss!");
+                }
+                WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+
+                WriteLine("Ros attacks with her claws…");
+
+                // for the Loup-Garou
+                Random rl = new Random();
+                int rollLG = rl.Next(1, 21);
+                Random dmgg = new Random();
+                int damageLG = dmgg.Next(1,13);     // 1-12 points of damage per attack
+
+                if(roll >= armorPlayer)
+                {
+                    WriteLine("Hit! It does {0} points of damage!", damageLG);
+                    playerHealth -= damageLG;
+                    WriteLine("You now have {0} Hit Points", playerHealth);
+                }
+                else
+                {
+                    WriteLine("Miss!");
+                }
+                WriteLine("Press 'Enter' to continue.");
+                Console.ReadLine();
+            }
+
+        }
+
+        public static void playerEnd()
+        {
+            WriteLine("You lost a lot of blood from Ros's attacks.\nYou fire wildly, only for her to backhand you across the chamber, into the wall.\nShe rushes over to you, looks down, and says: 'You meddled in affairs that didn't concern you. Fatal mistake.'\nShe swings her claws at your upper body, essentially decapitating you.");
+            System.Environment.Exit(0);
+        }
+            
+        public static void loupGarouEnd()
+        {
+            WriteLine("The Ros-Loup-Garou, despite its impressive resilience, speed, and strength, is looking very wounded and very ticked off. It crouches down, snarling and growling, ready to pounce.\nYou take a deep breath to steady yourself, aim the Gun, and fire, as she leaps…");
+            WriteLine("Your shot lands true.");
+            WriteLine("The shot hits the Loup-Garou in the upper forehead, knocking it off-course.\nIt lands with a VERY heavy ‘thud’, rolling towards the steel door.\nThe body starts to… change. It shrinks in height, the face starts to shrink… what’s left is the body of a more-humanl-like Ros Adams.\nAnd there is the strangest sight: the woman looks… content?");
+            WriteLine("Press 'Enter' to continue.");
+            Console.ReadLine();
+            Console.Clear();
+            
+            WriteLine("Ros Adams wanted the power of the Spirit World, for whatever reasons.\nShe tried a summoning spell and failed, ending up possessed and turned into a Loup-Garou.\nShe seemingly killed her husband - and possibly many more - before locking herself in the glyph-warded chamber.\nYou report back to the group that sent you, bringing the Gun and other items you might have found.\nThe group is pleased with your work: you solved the case of the Adams Manor!");
         }
         
     }
