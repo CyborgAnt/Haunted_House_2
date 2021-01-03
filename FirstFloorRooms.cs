@@ -10,7 +10,7 @@ namespace FirstFloor
         {
             
             WriteLine("You enter in a small entryway, a square, nearly empty room. \nThere is a coat rack in the far left corner and a couple of generic art pictures hung on the wall, but not else to the room.\nThe room itself was fairly dark; evening sunlight, coming in from windows in the front door, is the only source of light in the entry.");
-            WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more of a generic color, and not nearly as thick.");
+            WriteLine("Directly ahead of you, a hall leads into the gloom.\nTo your left, a thick, cherry-colored door stands, closed.\nTo your right, another door stands, although this door is more 'generic', and not nearly as thick.");
             WriteLine("Press 'Enter to continue.");
             Console.ReadLine();
             Console.Clear();
